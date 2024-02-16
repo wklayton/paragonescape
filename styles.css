@@ -1,0 +1,305 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url("https://use.typekit.net/cea2lqn.css");
+
+/* CSS Reset Code */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* PARAGON CSS HERE */
+:root {
+    --orange: rgb(255, 119, 0);
+    --white: rgb(242,242,242);
+    --lt-gray: rgb(168, 168, 168);
+    --dk-gray: rgb(26, 25, 29);
+    --black: rgb(16, 16, 20);
+    --deep-black: rgb(14, 14, 15);
+    --fonts: 'roboto', sans-serif;
+    background-color: var(--dk-gray);
+}
+
+::selection{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+a::selection{
+    color: var(--orange);
+}
+
+body {
+    font-family: var(--fonts);
+}
+
+/* General Styles */
+section {
+    margin-top: 3.5vh;
+}
+
+img {
+    color: var(--lt-gray);
+}
+
+h2, h3 {
+    line-height: 1.75;
+}
+
+h2 {
+    color: var(--white);
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+h3 {
+    color: var(--orange);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+p {
+    color: var(--white);
+    font-size: 1.25rem;
+    line-height: 2;
+    font-weight: 300;
+}
+
+a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--white);
+}
+
+/* Navigation Bar */
+nav {
+    width: 100vw;
+    height: 60px;
+    align-items: center;
+    background-color: var(--black);
+    border-bottom: solid 1px var(--lt-gray);
+    padding: 2vh 0;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    
+}
+
+nav svg {
+    width: auto;
+    height: 55px;
+}
+
+.full_nav a:hover{
+    color: var(--orange);
+}
+
+h1{
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.paragon{
+    font-family: "futura-pt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.escape {
+    color: var(--white);
+    font-size: 20px;
+    line-height: 1;
+    font-family: "courier-std", courier, monospace;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 6.1px;
+}
+
+.full_nav > ul{
+    display: inline-flex;
+    gap: 2.5vw;
+    justify-content: flex-end;
+}
+
+.full_nav > ul > li{
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2;
+}
+
+li > a {
+    color: var(--white);
+}
+
+li > a:hover {
+    color: var(--orange);
+}
+
+.full_nav {
+    width: 80vw;
+    margin: auto;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 25vw auto;
+}
+
+.main_nav {
+    text-align: right;
+    float: right;
+}
+
+.main_nav > li {
+    display: inline-block;
+}
+
+.dropdown {
+    display: none;
+    text-align: left;
+    z-index: 100;
+}
+
+.dropdown li{
+    padding: 0 2rem 1rem 2rem;
+}
+
+li:hover .dropdown {
+    display: block;
+    position: absolute;
+    background-color: var(--black);
+    border-bottom: solid 1px var(--lt-gray);
+}
+
+/* Main Content */
+.welcome {
+    width: 100%;
+    height: 100vh;
+    background: url(https://www.paragonescape.com/media/welcome-background-pharaohs.png) right top no-repeat;
+    background-size: auto 100vh, cover;
+    zoom: 115%;
+    z-index: -1;
+}
+
+.welcome img {
+    display: block;
+    width: 40vw;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 15vh;
+}
+
+#info {
+    padding-top: 4vh;
+    margin: 0 10vw;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10vw;
+}
+
+/* Games Section */
+#games > h2 {
+    text-align: center;
+}
+
+.awards > p {
+    color: var(--orange);
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 4vh;
+}
+
+.awards img {
+    max-height: 15vh;
+    margin: 0 auto;
+}
+
+.awards div{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 0 10vw;
+    align-items: center;
+}
+
+/* General Room */
+#games h3 {
+    margin: 0 10vw;
+}
+
+#games p {
+    margin: 0 10vw;
+}
+
+.room-info {
+    margin: 0 10vw;
+}
+
+/* Pharaohs */
+#pharaohs {
+    width: 100vw;
+    background: url(https://www.paragonescape.com/media/pharaohs-foreground-simple.webp) right center no-repeat, url(https://www.paragonescape.com/media/pharaohs-background.webp) center no-repeat;
+    padding: 7vh 0;
+}
+
+/* Clockwork */
+#clockwork {
+    width: 100vw;
+    background: url(https://www.paragonescape.com/media/clockwork-foreground-small.png) left no-repeat,
+    url(https://www.paragonescape.com/media/clockwork-background.webp) center no-repeat;
+    padding: 7vh 0;
+    text-align: right;
+}
