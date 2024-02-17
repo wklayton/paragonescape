@@ -70,6 +70,7 @@ table {
 ::selection{
     background-color: var(--white);
     color: var(--black);
+    text-shadow: none;
 }
 
 a::selection{
@@ -89,14 +90,15 @@ img {
     color: var(--lt-gray);
 }
 
-h2, h3 {
+h2, h3, h4 {
     line-height: 1.75;
 }
 
 h2 {
     color: var(--white);
-    font-size: 2.3rem;
+    font-size: 3.2rem;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -119,6 +121,12 @@ a {
 
 a:hover {
     color: var(--white);
+}
+
+.note {
+    color: var(--lt-gray);
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 
 /* Navigation Bar */
@@ -144,14 +152,19 @@ nav svg {
     color: var(--orange);
 }
 
+.paragon_logo {
+    white-space: nowrap;
+}
+
 h1{
     display: inline-block;
     padding-left: 10px;
 }
 
 .paragon{
-    font-family: "futura-pt", sans-serif;
-    font-weight: 500;
+    color: var(--orange);
+    font-family: "futura-pt", 'roboto';
+    font-weight: 400;
     font-style: normal;
     font-size: 45px;
     text-transform: uppercase;
@@ -223,12 +236,13 @@ li:hover .dropdown {
 }
 
 /* Main Content */
+/* Landing Section */
 .welcome {
     width: 100%;
     height: 100vh;
     background: url(https://www.paragonescape.com/media/welcome-background-pharaohs.png) right top no-repeat;
     background-size: auto 100vh, cover;
-    zoom: 115%;
+    zoom: 120%;
     z-index: -1;
 }
 
@@ -240,22 +254,39 @@ li:hover .dropdown {
     padding-top: 15vh;
 }
 
+/* Info Section */
 #info {
     padding-top: 4vh;
     margin: 0 10vw;
+    text-align: center;
+}
+
+#info > p {
+    color: var(--orange);
 }
 
 .info {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 10vw;
+    gap: 3vw;
 }
 
 /* Games Section */
+/* General */
+#games {
+    background-color: var(--black);
+}
+
 #games > h2 {
     text-align: center;
 }
 
+#games p {
+    margin: 1vh 10vw;
+    text-shadow: .1rem .1rem .075rem var(--black);
+}
+
+/* Awards */
 .awards > p {
     color: var(--orange);
     text-align: center;
@@ -275,31 +306,208 @@ li:hover .dropdown {
     align-items: center;
 }
 
-/* General Room */
+/* General Rooms */
 #games h3 {
-    margin: 0 10vw;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--white);
+    text-shadow: .25rem .25rem .3rem var(--dk-gray);
+    display: inline-block;
 }
 
-#games p {
+#games iframe {
     margin: 0 10vw;
 }
 
 .room-info {
-    margin: 0 10vw;
+    margin-top: 4vh;
+}
+
+.room-menu {
+    margin: 5vh 10vw;
+}
+
+.learn {
+    color: var(--orange);
+    background-color: transparent;
+    border: 1px solid var(--orange);
+    font-weight: 500;
+    padding: 1rem 3.5vw;
+    font-size: 1.3rem;
+}
+
+.learn:hover {
+    color: var(--orange);
+    background-color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.mini-book {
+    display: inline;
+    color: var(--white);
+    border: 2px solid var(--orange);
+    font-weight: 500;
+    padding: .5rem 1vw;
+    font-size: .9rem;
+}
+
+.mini-book:hover {
+    color: var(--orange);
+    background-color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.book {
+    color: var(--white);
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    font-weight: 500;
+    padding: 1rem 3.5vw;
+    font-size: 1.3rem;
+}
+
+.book:hover {
+    color: var(--orange);
+    background-color: var(--white);
+    border: 1px solid var(--white);
 }
 
 /* Pharaohs */
 #pharaohs {
-    width: 100vw;
-    background: url(https://www.paragonescape.com/media/pharaohs-foreground-simple.webp) right center no-repeat, url(https://www.paragonescape.com/media/pharaohs-background.webp) center no-repeat;
+    height: auto;
+    background: url(https://www.paragonescape.com/media/pharaohs-foreground-small.png) right center no-repeat, url(https://www.paragonescape.com/media/pharaohs-foreground-simple.webp) right center no-repeat, url(https://www.paragonescape.com/media/pharaohs-background.webp) center no-repeat;
+    background-size: cover;
     padding: 7vh 0;
+    text-align: left;
 }
+
+#pharaohs h3 {
+    margin: 0 2vw 0 10vw;
+}
+
+/* PHARAOHS iFRAME */
 
 /* Clockwork */
 #clockwork {
-    width: 100vw;
-    background: url(https://www.paragonescape.com/media/clockwork-foreground-small.png) left no-repeat,
-    url(https://www.paragonescape.com/media/clockwork-background.webp) center no-repeat;
+    height: auto;
+    background: url(https://www.paragonescape.com/media/clockwork-foreground-small.png) right center no-repeat, url(https://www.paragonescape.com/media/clockwork-background.webp) center no-repeat;
+    background-size: cover;
     padding: 7vh 0;
     text-align: right;
+}
+
+#clockwork h3 {
+    margin: 0 10vw 0 2vw;
+}
+
+/* CLOCKWORK iFRAME */
+
+/* About Us Section */
+#about {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: center;
+}
+
+.why {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 3vw;
+}
+
+.why p {
+    width: 80%;
+    margin: 0 auto;
+}
+/* FAQs */
+#faq {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#faq a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 400;
+}
+    
+    #faq a:hover {
+        color: var(--orange);
+}
+
+#faq h4 {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+#faq p {
+    font-size: 1.1rem;
+    color: var(--lt-gray);
+}
+
+.faq_box
+{
+  max-width: 80vw;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--lt-gray);
+  cursor: pointer;
+}
+
+.question
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer
+{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+
+.faq_box.active .answer
+{
+  max-height: 300px;
+}
+
+/* Contact */
+#contact {
+    text-align: center;
+}
+
+#contact iframe {
+    width: 100%;
+    margin-bottom: 5vh;
+}
+
+#contact h2, #contact a {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#contact h2 {
+    border-bottom: 2px solid var(--orange);
+    margin-bottom: 2vh;
+}
+
+#contact a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+#contact a:hover {
+    color: var(--orange);
+}
+
+/* Footer */
+footer {
+    padding: 2%;
+    text-align: center;
+    margin-top: 5vh;
 }
