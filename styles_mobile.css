@@ -1,0 +1,655 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url("https://use.typekit.net/cea2lqn.css");
+
+/* CSS Reset Code */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* --------------------------- */
+/* --------------------------- */
+
+
+/* PARAGON CSS HERE */
+/* General */
+:root {
+    --orange: rgb(255, 119, 0);
+    --white: rgb(242,242,242);
+    --lt-gray: rgb(168, 168, 168);
+    --dk-gray: rgb(26, 25, 29);
+    --black: rgb(16, 16, 20);
+    --deep-black: rgb(14, 14, 15);
+    --fonts: 'roboto', sans-serif;
+    background-color: var(--dk-gray);
+    font-size: 6px;
+}
+
+*:focus-visible {
+    outline: 3px solid var(--white);
+}
+
+@media only screen and (min-width: 275px) {
+    :root {
+        font-size: 8.5px;
+    }
+}
+
+@media only screen and (min-width: 520px) {
+    :root {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    :root {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :root {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (min-width: 2200px) {
+    :root {
+        font-size: 28px;
+    }
+}
+
+::selection{
+    background-color: var(--white);
+    color: var(--black);
+    text-shadow: none;
+}
+
+a::selection{
+    color: var(--orange);
+}
+
+body {
+    font-family: var(--fonts);
+}
+
+img {
+    color: var(--lt-gray);
+}
+
+p {
+    color: var(--white);
+    font-size: 1.5rem;
+    line-height: 2;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+a {
+    color: var(--orange);
+    text-decoration: none;
+    letter-spacing: 1.2px;
+}
+
+a:hover {
+    color: var(--white);
+}
+
+button {
+    font-family: var(--fonts);
+}
+
+h2, h3, h4 {
+    line-height: 1.75;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: var(--white);
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 80px;
+    margin-top: -80px;
+}
+
+h3 {
+    color: var(--orange);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* HEADER */
+/* NAVIGATION */
+    /* All Devices */
+    nav {
+        width: 100%;
+        background-color: var(--black);
+        position: fixed;
+        top: 0;
+        box-shadow: 0 1rem 0.75rem -0.5rem rgba(2, 2, 6, 0.65);
+        z-index: 1000;       
+    }
+
+        /* .full_nav */
+        @media only screen and (min-width: 1200px) {
+            .full_nav {
+                display: grid;
+                grid-template-columns: 30% auto;
+                margin: 0 10%;
+                height: inherit;
+            }
+        }
+
+        /* .paragon_logo */
+
+        .paragon_logo {
+            width: fit-content;
+            white-space: nowrap;
+            display: block;
+            height: fit-content;
+        }
+
+        h1 {
+            padding-left: 10px;
+            white-space: normal;
+            vertical-align:top;
+        }
+
+        h1 .paragon {
+            color: var(--orange);
+            font-family: "futura-pt", 'roboto', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.65px;
+            height: fit-content;
+        }
+
+        h1 .escape {
+            color: var(--white);
+            line-height: 1;
+            font-family: "courier-std", courier, monospace;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: 6.1px;
+        }
+
+        /* .paragon_logo @media */
+            nav {
+                height: 60px;
+                padding: 8px 0 0;
+            }
+            
+            .paragon_logo {
+                margin: 0 auto;
+            }
+
+            .paragon_logo svg {
+                width: auto;
+                height: 45px;
+                margin-top: 4px;
+            }
+
+            h1 {
+                display: none;
+                margin-top: 5px;
+            }
+            
+        @media only screen and (min-width: 275px) {
+            nav {
+                height: 60px;
+            }
+
+            .paragon_logo svg {
+                width: auto;
+                height: 45px;
+                margin-top: 4px;
+            }
+
+            h1 {
+                display: inline-block;
+            }
+
+            h1 .paragon {
+                font-size: 27px;
+            }
+
+            h1 .escape {
+                font-size: 8px;
+            }
+        }
+
+        @media only screen and (min-width: 520px) {
+            nav {
+                height: 75px;
+                padding: 8px 0;
+
+            }
+
+            .paragon_logo svg {
+                width: auto;
+                height: 66px;
+            }
+
+            h1 .paragon {
+                font-size: 43px;
+            }
+
+            h1 .escape {
+                font-size: 18.35px;
+            }
+        }
+
+        @media only screen and (min-width: 750px) {
+            .games_link, .nav_link {
+                font-size: 5rem;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .paragon_logo {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (min-width: 2200px) {
+            nav {
+                height: 125px;
+            }
+
+            .paragon_logo svg {
+                width: auto;
+                height: 110px;
+                margin-top: 8px;
+            }
+
+            h1 {
+                margin-top: 8px;
+            }
+
+            h1 .paragon {
+                font-size: 70px;
+            }
+    
+            h1 .escape {
+                font-size: 25px;
+                letter-spacing: 12.5px;
+            }
+        }
+    /* .paragon_logo end */
+
+
+        /* .main_nav */
+            /* .nav_item */
+            .nav_item {
+                margin: 0.4rem auto;
+                width: fit-content;
+            }
+            
+            .nav_link {
+                color: var(--white);
+                font-size: 1.15rem;
+                font-weight: 500;
+                line-height: 2;
+            }
+
+            .games_hover {
+                background-color: transparent;
+                border: none;
+                padding: 0;
+            }
+
+            .nav_link:hover, .nav_link:focus, .games_link:hover, .games_hover:focus, .nav_item3:focus-within button {
+                color: var(--orange);
+            }
+
+            .nav_item svg {
+                width: 0.9rem;
+                height: auto;
+                margin-bottom: 1px;
+                stroke: var(--white);
+                stroke-width: 7.5;
+            }
+
+            .games_hover {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                color: var(--white);
+                font-size: 1.15rem;
+                font-weight: 500;
+                line-height: 2;
+            }
+
+            .svg_hover {
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .nav_item3:focus-within .svg_hover {
+                transform: rotate(-180deg);
+            }
+
+            .games_hover:hover .svg_hover, .games_hover:focus .svg_hover, .nav_item3:focus-within .svg_hover {
+                stroke: var(--orange);
+                
+            }
+
+            .dropdown .nav_link {
+                color: var(--lt-gray);
+            }
+
+            .dropdown .nav_link:hover {
+                color: var(--orange);
+            }
+
+        /* @media .main_nav */
+                .main_nav {
+                    top: 66px;
+                    position: fixed;
+                    flex-direction: column;
+                    background-color: var(--black);
+                    width: 100%;
+                    text-align: center;
+                    max-height: 0;
+                    padding-bottom: 0;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease-in-out, padding-bottom 0.2s ease-in-out;
+                    box-shadow: 0 1rem 0.5rem -0.5rem rgba(2, 2, 6, 0.65);
+                }
+
+                .main_nav.active {
+                    max-height: 430px;
+                    padding-bottom: 5px;
+                }
+
+                .main_nav > .nav_item {
+                    visibility: hidden;
+                }
+
+                .main_nav.active > .nav_item {
+                    visibility: visible;
+                }
+                
+                .hamburger {
+                    display: block;
+                    border: none;
+                    cursor: pointer;
+                    color: var(--white);
+                    position: fixed;
+                    left: 85%;
+                    top: 23px;
+                    width: 35px;
+                    background-color: transparent;
+                }
+
+                .hamburger:focus-visible {
+                    outline: 3px solid white;
+                    outline-offset: 5px;
+                }
+
+                .hamburger p {
+                    display: inline;
+                    padding-right: 40px;
+                    margin-top: -8px;
+                    float: right;
+                    text-transform: uppercase;
+                }
+
+                .ham_bar {
+                    display: block;
+                    -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, scale 0.3s ease-in-out;
+                    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, scale 0.3s ease-in-out;
+                    border: 1px solid var(--white);
+                    margin-bottom: 5px;
+                }
+
+                /* .hamburger animation */
+                .hamburger.active .ham_bar:nth-child(2) {
+                    transform: rotate(25deg);
+                    opacity: 0;
+                    scale: 0.25;
+                }
+
+                .hamburger.active .ham_bar:nth-child(1) {
+                    transform: translateY(7px) rotate(45deg);
+                }
+
+                .hamburger.active .ham_bar:nth-child(3) {
+                    transform: translateY(-7px) rotate(-45deg);
+                }
+                
+                /* .dropdown open and close */
+                .dropdown {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease-in-out;
+                    padding: 0;
+                }
+                
+                .nav_item3 .nav_link:focus {
+                    margin: 0 5px;
+                    padding: 0 -5px;
+                }
+
+                .nav_item3:focus-within .dropdown {
+                    max-height: 200px;
+                }
+
+                .dropdown a {
+                    visibility: hidden;
+                }
+
+                .nav_item3:focus-within .dropdown a {
+                    visibility: visible;
+                }
+
+            @media only screen and (min-width: 275px){
+                .main_nav {
+                    top: 64px;
+                }
+            }
+
+            @media only screen and (min-width: 520px){
+                .main_nav {
+                    top: 85px;
+                }
+
+                .hamburger {
+                    left: 88%;
+                    top: 32px;
+                    width: 45px;
+                }
+
+                .ham_bar {
+                    margin-bottom: 8px;
+                }
+
+                /* .hamburger animation */            
+                .hamburger.active .ham_bar:nth-child(1) {
+                    transform: translateY(10px) rotate(45deg);
+                }
+            
+                .hamburger.active .ham_bar:nth-child(3) {
+                    transform: translateY(-10px) rotate(-45deg);
+                }
+            }
+
+            @media only screen and (min-width: 1200px) {
+                .main_nav{
+                    display: block;
+                    visibility: visible;
+                    position: relative;
+                    overflow: visible;
+                    display: inline-flex;
+                    flex-direction: row;
+                    top: -20px;
+                    max-height: fit-content;
+                    background-color: transparent;
+                    margin: 30px 0;
+                    text-wrap: nowrap;
+                    box-shadow: none;
+                    justify-content: space-between;
+                    margin-left: auto;
+                }
+
+                .main_nav > .nav_item {
+                    visibility: visible;
+                    position: relative;
+                    width: auto;
+                    text-align: right;
+                    margin-right: 0;
+                }
+
+                .hamburger {
+                    display: none;
+                }
+
+
+                .dropdown {
+                    visibility: visible;
+                    overflow: hidden;
+                    position: absolute;
+                    background-color: var(--black);
+                    margin: 15px 0 0 -30px;
+                    transition: max-height 0.3s ease-in-out, box-shadow 0.3s ease-out;
+                    background-color: var(--black);
+                }
+
+                .dropdown .nav_item{
+                    padding: 0 2rem 1rem 2rem;
+                    text-align: left;
+                    margin-left: 0;
+                }
+
+                .nav_item3:focus-within .dropdown, .nav_item3:hover .dropdown { 
+                    box-shadow: 0 1.3rem 1.5rem -0.5rem rgba(2, 2, 6, 0.6);
+                    margin-top: 0;
+                    max-height: 200px;
+                    padding-top: 15px;
+                    margin-top: 0;
+                }
+
+                .nav_item3:focus-within .dropdown a, .nav_item3:hover .dropdown a {
+                    visibility: visible;
+                }
+        }
+
+        @media only screen and (min-width: 2200px) {
+            .main_nav {
+                top: -12px;
+            }
+
+            .dropdown {
+                margin-left: -50px;
+            }
+        }
+/* NAVIGATION END */
+
+
+/* .WELCOME */
+    /* 1200 < @media */
+        .welcome {
+            width: 100%;
+            height: 100vh;
+            background: url(https://www.paragonescape.com/media/welcome-background-pharaohs.png) right no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            box-shadow: 0 -1rem 1.5rem -0.5rem rgba(2, 2, 6, 0.75) inset;
+            z-index: -1;
+        }
+
+        .welcome img {
+            display: block;
+            width: 80%;
+            height: auto;
+            max-height: 50vh;
+            object-fit: contain;
+            margin: 0 auto;
+            padding-top: max(15vh, 85px);
+            -webkit-filter: drop-shadow(5px 5px 5px rgba(2, 2, 6, 0.5));
+            filter: drop-shadow(5px 5px 5px rgba(2, 2, 6, 0.5));
+        }
+/* .WELCOME END */
+/* HEADER END */
+
+/* MAIN */
+    main {
+        text-align: center;
+    }
+    @media screen and (min-width: 1200px) {
+        main {
+            text-align: left;
+        }
+    }
+
+    section {
+        margin-top: 3.5rem;
+    }
+/* #INFO */
+
+/* #INFO END */
+
+
+/* #CONTACT */
+address {
+    cursor: pointer;
+}
+/* #CONTACT END */
+
+/* MAIN END */
+
+
+/* FOR EARLY TESTING REMOVE LATER */
+    iframe, img {
+        width: 50px;
+        height: auto;
+    }

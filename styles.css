@@ -92,31 +92,34 @@ img {
 
 h2, h3, h4 {
     line-height: 1.75;
+    letter-spacing: 1px;
 }
 
 h2 {
     color: var(--white);
-    font-size: 3.2rem;
+    font-size: 4rem;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 h3 {
     color: var(--orange);
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 500;
 }
 
 p {
     color: var(--white);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 2;
     font-weight: 300;
+    letter-spacing: 1px;
 }
 
 a {
     color: var(--orange);
     text-decoration: none;
+    letter-spacing: 1.2px;
 }
 
 a:hover {
@@ -125,27 +128,119 @@ a:hover {
 
 .note {
     color: var(--lt-gray);
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 400;
+    width: 80%;
 }
+
+/* Video Cookie Protection */
+
+.video__iframe:not([src]) {
+    display: none;
+  }
+  
+  .video__iframe[src] + .video__notice {
+    display: none;
+  }
+
+  .video {
+    display: block;
+  }
+  
+  .video::before {
+    display: block;
+    content: '';
+    height: 0;
+  }
+
+  .video__notice > * {
+    max-width: 38rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+  }
+  
+  .video__notice > button {
+    font: inherit;
+    padding: .5rem 1.25rem;
+    background-color: var(--orange);
+    border: none;
+    color: var(--black);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 2vh;
+  }
+  
+  .video__notice > button:hover,
+  .video__notice > button:focus {
+    background-color: var(--white);
+    color: var(--orange);
+  }
+
+/* Maps Consent */
+
+/* .maps__iframe:not([src]) {
+    display: none;
+  }
+  
+  .maps__iframe[src] + .maps__notice {
+    display: none;
+  }
+
+  .maps {
+    display: block;
+  }
+  
+  .maps::before {
+    display: block;
+    content: '';
+    height: 0;
+  }
+
+  .maps__notice > * {
+    max-width: 38rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+  }
+  
+  .maps__notice > button {
+    font: inherit;
+    padding: .5rem 1.25rem;
+    background-color: var(--orange);
+    border: none;
+    color: var(--black);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 2vh;
+  }
+  
+  .maps__notice > button:hover,
+  .maps__notice > button:focus {
+    background-color: var(--white);
+    color: var(--orange);
+  } */
 
 /* Navigation Bar */
 nav {
-    width: 100vw;
-    height: 60px;
+    width: 100%;
+    height: 75px;
     align-items: center;
     background-color: var(--black);
     border-bottom: solid 1px var(--lt-gray);
-    padding: 2vh 0;
+    padding-top: 8px;
     position: fixed;
     z-index: 99;
     top: 0;
+    box-shadow: 0 0 3.5rem 2.5rem rgba(2, 2, 6, 0.5);
     
 }
 
-nav svg {
+.paragon_logo svg {
     width: auto;
-    height: 55px;
+    height: 66px;
 }
 
 .full_nav a:hover{
@@ -154,11 +249,13 @@ nav svg {
 
 .paragon_logo {
     white-space: nowrap;
+    width: fit-content;
+    
 }
 
 h1{
-    display: inline-block;
     padding-left: 10px;
+    float: inline-end;
 }
 
 .paragon{
@@ -166,19 +263,28 @@ h1{
     font-family: "futura-pt", 'roboto', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 45px;
+    font-size: 43px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.65px;
+    height: fit-content;
 }
 
 .escape {
     color: var(--white);
-    font-size: 20px;
+    font-size: 18.35px;
     line-height: 1;
     font-family: "courier-std", courier, monospace;
     font-weight: 400;
     font-style: normal;
     letter-spacing: 6.1px;
+}
+
+.full_nav {
+    width: 80vw;
+    margin: auto;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .full_nav > ul{
@@ -188,38 +294,46 @@ h1{
 }
 
 .full_nav > ul > li{
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 500;
     line-height: 2;
 }
 
-li > a {
+.full_nav li > a {
     color: var(--white);
 }
 
-li > a:hover {
+.full_nav li > a:hover {
     color: var(--orange);
-}
-
-.full_nav {
-    width: 80vw;
-    margin: auto;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 25vw auto;
 }
 
 .main_nav {
     text-align: right;
-    float: right;
+    float: inline-start;
+    margin-right: 14px;
 }
 
 .main_nav > li {
     display: inline-block;
+    white-space: nowrap;
+}
+
+.main_nav svg {
+    width: 1rem;
+    height: auto;
+    margin-bottom: 1px;
+    stroke: var(--white);
+    stroke-width: 7.5;
+}
+
+.games_hover:hover .svg_hover {
+    stroke: var(--orange);
 }
 
 .dropdown {
     display: none;
+    padding-top: 2vh;
+    position: absolute;
     text-align: left;
     z-index: 100;
 }
@@ -230,7 +344,6 @@ li > a:hover {
 
 li:hover .dropdown {
     display: block;
-    position: absolute;
     background-color: var(--black);
     border-bottom: solid 1px var(--lt-gray);
 }
@@ -239,7 +352,7 @@ li:hover .dropdown {
 /* Landing Section */
 .welcome {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     background: url(https://www.paragonescape.com/media/welcome-background-pharaohs.png) right top no-repeat;
     background-size: auto 100vh, cover;
     zoom: 120%;
@@ -248,7 +361,7 @@ li:hover .dropdown {
 
 .welcome img {
     display: block;
-    width: 40vw;
+    width: 35vw;
     height: auto;
     margin: 0 auto;
     padding-top: 15vh;
@@ -257,12 +370,32 @@ li:hover .dropdown {
 /* Info Section */
 #info {
     padding-top: 4vh;
-    margin: 0 10vw;
+    margin: 0 10vw 10vh;
     text-align: center;
+}
+
+#info h3 {
+    color: var(--white);
+    font-size: 2.25rem;
+    border-bottom: 2px solid var(--orange);
+    padding-bottom: 1vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #info > p {
     color: var(--orange);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-bottom: 4vh;
+}
+
+#info .note {
+    margin: 0 auto;
 }
 
 .info {
@@ -281,15 +414,15 @@ li:hover .dropdown {
 }
 
 #games p {
-    margin: 1vh 10vw;
     text-shadow: .1rem .1rem .075rem var(--black);
 }
 
 /* Awards */
 .awards > p {
     color: var(--orange);
+    font-weight: 500;
+    letter-spacing: 0.5px;
     text-align: center;
-    font-weight: 700;
     padding-bottom: 4vh;
 }
 
@@ -308,18 +441,58 @@ li:hover .dropdown {
 /* General Rooms */
 #games h3 {
     font-weight: 700;
-    font-size: 2.2rem;
+    font-size: 2.7rem;
     color: var(--white);
     text-shadow: .25rem .25rem .3rem var(--dk-gray);
+    letter-spacing: 1px;
     display: inline-block;
 }
 
-#games iframe {
+#games .video__iframe {
+    aspect-ratio: 16 / 9;
+    width: 40vw;
+    height: auto;
+    border-radius: 0.75rem;
+    position: relative;
+}
+
+.video {
     margin: 0 10vw;
+}
+
+#games .video p {
+    margin: 0;
+}
+
+.basic-info {
+    display: inline-grid;
+    grid-template-columns: 4.5rem 4.5rem;
+    gap: 1vw;
+    text-align: left;
+    place-content: left;
+}
+
+.basic-info div {
+    width: fit-content;
+}
+
+.basic-info p {
+    font-weight: 400;
+    text-align: center;
+}
+
+.basic-info img{
+    display: inline-block;
+    width: 4.5rem;
+    height: auto;
 }
 
 .room-info {
     margin-top: 4vh;
+}
+
+.room-info p {
+    margin: 1vh 10vw 2vh;
 }
 
 .room-menu {
@@ -333,6 +506,7 @@ li:hover .dropdown {
     font-weight: 500;
     padding: 1rem 3.5vw;
     font-size: 1.3rem;
+    margin-right: 3vw;
 }
 
 .learn:hover {
@@ -341,7 +515,26 @@ li:hover .dropdown {
     border: 1px solid var(--white);
 }
 
-.mini-book {
+#games form {
+    padding: 2%;
+    background-color: rgba(16, 16, 20, 0.55);
+    border: 1px solid var(--orange);
+    width: fit-content;
+}
+
+#games form a {
+    font-weight: 500;
+}
+
+#pharaohs form {
+    margin-right: auto;
+}
+
+#clockwork form {
+    margin-left: auto;
+}
+
+/* .mini-book {
     display: inline;
     color: var(--white);
     border: 2px solid var(--orange);
@@ -354,7 +547,7 @@ li:hover .dropdown {
     color: var(--orange);
     background-color: var(--white);
     border: 2px solid var(--white);
-}
+} */
 
 .book {
     color: var(--black);
@@ -380,31 +573,37 @@ li:hover .dropdown {
     text-align: left;
 }
 
-#pharaohs h3 {
-    margin: 0 2vw 0 10vw;
+#pharaohs .room-info > p {
+    margin-right: 40vw;
 }
 
-/* PHARAOHS iFRAME */
+#pharaohs h3 {
+    margin: 0 2vw 0 10vw;
+    text-transform: uppercase;
+}
 
 /* Clockwork */
 #clockwork {
     height: auto;
-    background: url(https://www.paragonescape.com/media/clockwork-foreground-small.png) right center no-repeat, url(https://www.paragonescape.com/media/clockwork-background.webp) center no-repeat;
+    background: url(https://www.paragonescape.com/media/clockwork-foreground-small.png) left center no-repeat, url(https://www.paragonescape.com/media/clockwork-background.webp) center no-repeat;
     background-size: cover;
     padding: 7vh 0;
     text-align: right;
 }
 
-#clockwork h3 {
-    margin: 0 10vw 0 2vw;
+#clockwork .room-info > p {
+    margin-left: 40vw;
 }
 
-/* CLOCKWORK iFRAME */
+#clockwork h3 {
+    margin: 0 10vw 0 2vw;
+    text-transform: uppercase;
+}
 
 /* About Us Section */
 #about {
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
     text-align: center;
 }
 
@@ -416,13 +615,31 @@ li:hover .dropdown {
 }
 
 .why p {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
 }
+
+.why h3 {
+    color: var(--white);
+    font-size: 2.25rem;
+    border-bottom: 2px solid var(--orange);
+    padding-bottom: 1vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* FAQs */
 #faq {
     margin-left: 10vw;
     margin-right: 10vw;
+    margin-bottom: 7vh;
+}
+
+#faq h3 {
+    font-size: 1.65rem;
 }
 
 #faq a {
@@ -438,11 +655,11 @@ li:hover .dropdown {
 #faq h4 {
     color: var(--white);
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.45rem;
 }
 
 #faq p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--lt-gray);
 }
 
@@ -464,6 +681,17 @@ li:hover .dropdown {
 
 .answer
 {
+  height: 0;
+  overflow: hidden;
+}
+
+.faq_box.active .answer
+{
+  height: auto;
+}
+
+/* .answer
+{
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s ease-in-out;
@@ -471,8 +699,8 @@ li:hover .dropdown {
 
 .faq_box.active .answer
 {
-  max-height: 300px;
-}
+  max-height: 150px;
+} */
 
 /* Contact */
 #contact {
@@ -481,6 +709,7 @@ li:hover .dropdown {
 
 #contact iframe {
     width: 100%;
+    height: 45vh;
     margin-bottom: 5vh;
 }
 
@@ -491,16 +720,41 @@ li:hover .dropdown {
 
 #contact h2 {
     border-bottom: 2px solid var(--orange);
-    margin-bottom: 2vh;
+    margin: 0 auto 4vh;
+    width: 35vw;
+}
+
+#contact p {
+    margin-bottom: 1vh;
 }
 
 #contact a {
-    font-size: 1.4rem;
+    font-size: 1.65rem;
     font-weight: 500;
     color: var(--white);
+    text-align: center;
 }
 
 #contact a:hover {
+    color: var(--orange);
+}
+
+#contact address {
+    cursor: pointer;
+}
+
+#contact form {
+    padding: 2%;
+    background-color: rgba(16, 16, 20, 0.65);
+    border: 1px solid var(--orange);
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+#contact form a {
+    font-size: 1rem;
+    margin: 0;
     color: var(--orange);
 }
 
@@ -508,5 +762,145 @@ li:hover .dropdown {
 footer {
     padding: 2%;
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
+
+footer .note {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer button {
+    font: inherit;
+    padding: 0;
+    background-color: var(--dk-gray);
+    border: none;
+    color: var(--lt-gray);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-top: 2vh;
+}
+
+footer button:hover {
+    color: var(--orange);
+    background-color: var(--dk-gray);
+}
+
+
+/* Games Pages */
+/* Pharaohs Specific */
+.pharaohs-welcome {
+    height: 30vh;
+    background: url(https://www.paragonescape.com/media/pharaohs-foreground-simple.webp) right center no-repeat, url(https://www.paragonescape.com/media/pharaohs-background.webp) center no-repeat;
+    background-size: cover;
+    padding: 14vh 0;
+}
+
+.pharaohs-welcome h2 {
+    text-align: center;
+    margin: 10vh auto 0;
+    letter-spacing: 3px;
+}
+
+.pharaohs-welcome .book {
+    text-align: center;
+    width: fit-content;
+    margin: 2vh auto 0;
+    display: block;
+}
+/* Clockwork Specific */
+.clockwork-welcome {
+    height: 30vh;
+    background: url(https://www.paragonescape.com/media/clockwork-background.webp) center no-repeat;
+    background-size: cover;
+    padding: 14vh 0;
+}
+
+.clockwork-welcome h2 {
+    text-align: center;
+    margin: 10vh auto 0;
+    letter-spacing: 3px;
+}
+
+.clockwork-welcome .book {
+    text-align: center;
+    width: fit-content;
+    margin: 2vh auto 0;
+    display: block;
+    /* background-color: rgb(80, 212, 47);
+    border-color: rgb(118, 170, 41); */
+}
+
+/* General */
+
+#room-page-info {
+    margin: 0 10vw;
+    text-align: center;
+}
+
+#room-page-info img{
+    width: 12vw;
+    margin-top: 3vh;
+}
+
+#room-page-info h3 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--white);
+    width: 100%;
+    margin: 1vh 0 0;
+}
+
+#room-page-info > div{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-bottom: 2vh;
+    border-bottom: 2px solid var(--orange);
+}
+
+.story-pics {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#pics h3 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--white);
+    text-align: center;
+}
+
+#pics img {
+    width: 15vw;
+    height: auto;
+    margin: 2vh auto;
+    display: block;
+}
+
+#room-page-info p {
+    color: var(--orange);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#story-overview {
+    margin: 0 7vw 0 0;
+    text-align: left;
+}
+
+#story-overview h3 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--white);
+    margin: 3vh 0;
+}
+
+#story-overview p {
+    margin-bottom: 2vh;
+}
+
+
+

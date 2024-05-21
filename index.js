@@ -1,7 +1,141 @@
-const faqs = document.querySelectorAll(".faq_box");
+// Cookies
+//
+let cookies = document.cookie;
 
-faqs.forEach(faq => {
-  faq.addEventListener("click", () => {
-    faq.classList.toggle("active");
+// Checks to see if user already has allowed YT
+if (cookies.indexOf('ytPreference=allow') !== -1){
+  activateVideos();
+}
+
+// Closes out all third party embedded content
+function deactivateCookies() {
+  document.cookie = 'ytPreference=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+  deactivateVideos();
+}
+
+// Removes the src attribute from YT videos
+function deactivateVideos() {
+  const ytFrame = document.querySelectorAll('.video__iframe[src*="youtube-nocookie.com"]');
+
+  ytFrame.forEach((iframe) => {
+    iframe.removeAttribute('src');
+  });
+}
+
+// Allows the YT videos to grab their source
+function activateVideos() {
+  const ytFrame = document.querySelectorAll('.video__iframe[data-src*="youtube-nocookie.com"]');
+
+  ytFrame.forEach((iframe) => {
+    iframe.src = iframe.dataset.src;
+  });
+}
+
+// Creates a cookie when clicking allow YT to save the user's preference for YT videos
+const notices = document.querySelectorAll('.video__notice');
+
+notices.forEach((notice) => {
+  notice.addEventListener('submit', (event) => {
+    activateVideos();
+    event.preventDefault();
+    document.cookie = "ytPreference=allow";
+  });
+});
+
+
+
+// Hamburger/Navigation Menu
+//
+const hamburger = document.querySelector(".hamburger");
+const mainNav = document.querySelector(".main_nav");
+
+// hamburger/main_nav .active toggle
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    mainNav.classList.toggle("active");
+}
+
+// Close the menu when a link is pressed
+const navLink = document.querySelectorAll(".nav_link");
+const navLink2 = document.querySelectorAll(".paragon_logo");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+navLink2.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    mainNav.classList.remove("active");
+}
+
+// Close menu with the escape key and focus on hamburger menu
+window.addEventListener('keydown', function(e) {
+  if ((e.key === "Escape") && (hamburger.classList.contains("active"))) {
+      this.document.getElementById("menu-icon").focus();
+      ariaExpUpdater();
+      hamburger.classList.remove("active");
+      mainNav.classList.remove("active");
+    }
+});
+
+// Update the Aria-Expanded attribute for the hamburger menu
+function ariaExpUpdater() {
+  let hamExpValue = document.getElementById("menu-icon").getAttribute("aria-expanded");
+
+  if (hamburger.classList.contains("active")) {
+  hamExpValue = "false"
+  } else {
+  hamExpValue = "true"
+  }
+  document.getElementById("menu-icon").setAttribute("aria-expanded", hamExpValue);
+}
+
+// Update the Aria-Label attribute for the hamburger menu
+function ariaLabelUpdater() {
+  let hamActionValue = document.getElementById("menu-icon").getAttribute("aria-label");
+
+  if (hamburger.classList.contains("active")) {
+    hamActionValue = "open-menu"
+  } else {
+    hamActionValue = "close-menu"
+  }
+  document.getElementById("menu-icon").setAttribute("aria-label", hamActionValue);
+}
+
+// Update the Aria-Expanded attribute for the Games button on focus to indicate a submenu
+let gamesMenu = document.getElementById("nav_item3")
+let dropdownMenu = document.getElementById("games_hover");
+
+gamesMenu.addEventListener("focusin", (event) => {
+  dropdownMenu.setAttribute("aria-expanded", "true");
+});
+
+gamesMenu.addEventListener("focusout", (event) => {
+  setTImeout(() => dropdownMenu.setAttribute("aria-expanded", "false"), 1);
+});
+
+
+
+// faq .active toggle
+const faqs = document.querySelectorAll(".faq_box");
+faqs.forEach(faqBox => {
+  faqBox.addEventListener("click", () => {
+    faqBox.classList.toggle("active");
   })
 });
+
+
+
+// Opens apple maps if on apple
+// Need a better solution
+function mapsSelector() {
+  if
+    ((navigator.platform.indexOf("iPhone") != -1) || 
+     (navigator.platform.indexOf("iPad") != -1) || 
+     (navigator.platform.indexOf("iPod") != -1)) {
+    window.open("geo:33.2838943,-111.6435594");
+    } else {
+    window.open("https://www.google.com/maps/place/Paragon+Escape+Games/@33.2838943,-111.6435594,17z/data=!3m1!4b1!4m6!3m5!1s0x872bb3c2f1cff71f:0xae04c6f42fa38ff!8m2!3d33.2838898!4d-111.6409845!16s%2Fg%2F11grbwfvbw?entry=ttu");
+    }
+}
