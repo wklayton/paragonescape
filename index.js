@@ -1,6 +1,6 @@
-// Cookies
-//
+// Video/Cookie Universal Variables
 let cookies = document.cookie;
+const notices = document.querySelectorAll('.video__notice');
 
 // Checks to see if user already has allowed YT
 if (cookies.indexOf('ytPreference=allow') !== -1){
@@ -13,26 +13,7 @@ function deactivateCookies() {
   deactivateVideos();
 }
 
-// Removes the src attribute from YT videos
-function deactivateVideos() {
-  const ytFrame = document.querySelectorAll('.video__iframe[src*="youtube-nocookie.com"]');
-
-  ytFrame.forEach((iframe) => {
-    iframe.removeAttribute('src');
-  });
-}
-
-// Allows the YT videos to grab their source
-function activateVideos() {
-  const ytFrame = document.querySelectorAll('.video__iframe[data-src*="youtube-nocookie.com"]');
-
-  ytFrame.forEach((iframe) => {
-    iframe.src = iframe.dataset.src;
-  });
-}
-
 // Creates a cookie when clicking allow YT to save the user's preference for YT videos
-const notices = document.querySelectorAll('.video__notice');
 
 notices.forEach((notice) => {
   notice.addEventListener('submit', (event) => {
@@ -42,12 +23,45 @@ notices.forEach((notice) => {
   });
 });
 
+// Allows the YT videos to grab their source
+function activateVideos() {
+  const ytFrame = document.querySelectorAll('.video__iframe[data-src*="youtube-nocookie.com"]');
+
+  ytFrame.forEach((iframe) => {
+    iframe.src = iframe.dataset.src;
+    iframe.classList.remove("yt_hidden");
+  });
+  
+  notices.forEach((notice) => {
+    notice.classList.add('notice_hidden');
+  });
+}
+
+// Removes the src attribute from YT videos
+function deactivateVideos() {
+  const ytFrame = document.querySelectorAll('.video__iframe[src*="youtube-nocookie.com"]');
+
+  ytFrame.forEach((iframe) => {
+    iframe.removeAttribute('src');
+    iframe.classList.add("yt_hidden");
+  });
+
+  notices.forEach((notice) => {
+    notice.classList.remove('notice_hidden')
+  });
+}
 
 
-// Hamburger/Navigation Menu
+// Hamburger/Navigation Universal Variables
 //
 const hamburger = document.querySelector(".hamburger");
 const mainNav = document.querySelector(".main_nav");
+
+const navLink = document.querySelectorAll(".nav_link");
+const navLink2 = document.querySelectorAll(".paragon_logo");
+
+const gamesMenu = document.getElementById("nav_item3")
+const dropdownMenu = document.getElementById("games_hover");
 
 // hamburger/main_nav .active toggle
 hamburger.addEventListener("click", mobileMenu);
@@ -57,10 +71,14 @@ function mobileMenu() {
     mainNav.classList.toggle("active");
 }
 
-// Close the menu when a link is pressed
-const navLink = document.querySelectorAll(".nav_link");
-const navLink2 = document.querySelectorAll(".paragon_logo");
 
+window.addEventListener('click', function(e) {
+  if (e.target.className.includes("nav_element") != true) {
+    closeMenu();
+  }
+});
+
+// Close the menu when a link is pressed
 navLink.forEach(n => n.addEventListener("click", closeMenu));
 navLink2.forEach(n => n.addEventListener("click", closeMenu));
 
@@ -104,21 +122,19 @@ function ariaLabelUpdater() {
 }
 
 // Update the Aria-Expanded attribute for the Games button on focus to indicate a submenu
-let gamesMenu = document.getElementById("nav_item3")
-let dropdownMenu = document.getElementById("games_hover");
-
 gamesMenu.addEventListener("focusin", (event) => {
   dropdownMenu.setAttribute("aria-expanded", "true");
 });
 
 gamesMenu.addEventListener("focusout", (event) => {
-  setTImeout(() => dropdownMenu.setAttribute("aria-expanded", "false"), 1);
+  dropdownMenu.setAttribute("aria-expanded", "false"), 1;
 });
 
 
 
 // faq .active toggle
 const faqs = document.querySelectorAll(".faq_box");
+
 faqs.forEach(faqBox => {
   faqBox.addEventListener("click", () => {
     faqBox.classList.toggle("active");

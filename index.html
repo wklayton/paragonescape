@@ -17,11 +17,11 @@
     </head>
     <body itemscope itemtype="https://schema.org/EntertainmentBusiness">
         <header>
-            <nav aria-labelledby="menu-icon">
-                <div class="full_nav">
-                    <a class="paragon_logo" href="#" aria-label="Home">
+            <nav class="nav_element" aria-labelledby="menu-icon">
+                <div class="full_nav nav_element">
+                    <a class="paragon_logo nav_element" href="#" aria-label="Home">
                         <!-- Paragon Logo SVG -->
-                        <svg itemprop="logo" id="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.83 119.64">
+                        <svg class="nav_element" itemprop="logo" id="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.83 119.64">
                         <defs>
                             <style>
                             .cls-1 {
@@ -50,36 +50,36 @@
                         <path class="cls-1" d="M72.28,111.81c-.44-.7-.69-.87-1.25-1.67-.6-.85-.99-1.61-1.23-2.1-.25.6-.54,1.54-.36,2.61.24,1.41,1.13,2.06,1.69,3.02.61,1.04,1.06,2.81.01,5.98.46-.26,1.37-.89,1.93-2.05.68-1.42.4-2.75.27-3.35-.23-1.13-.75-1.94-1.06-2.44Z"/>
                         </svg>
                         <!-- End of SVG -->
-                        <h1 itemprop="name"><span class="paragon">Paragon </span><br><span class="escape">Escape Games</span></h1>
+                        <h1 class="nav_element" itemprop="name"><span class="paragon nav_element">Paragon </span><br><span class="escape nav_element">Escape Games</span></h1>
                     </a>
-                    <button id="menu-icon" class="hamburger" aria-label="open-menu" aria-haspopup="true" aria-expanded="false" aria-controls="main-menu" onclick="ariaExpUpdater(), ariaLabelUpdater()">
-                        <span class="ham_bar"></span>
-                        <span class="ham_bar"></span>
-                        <span class="ham_bar"></span>
+                    <button id="menu-icon" class="hamburger nav_element" aria-label="open-menu" aria-haspopup="true" aria-expanded="false" aria-controls="main-menu" onclick="ariaExpUpdater(), ariaLabelUpdater()">
+                        <span class="ham_bar nav_element"></span>
+                        <span class="ham_bar nav_element"></span>
+                        <span class="ham_bar nav_element"></span>
                     </button>
-                    <ul id="main-menu" class="main_nav">
-                        <li class="nav_item nav_item1"><a class="nav_link" href="#">Book Now</a></li>
-                        <li class="nav_item nav_item2"><a class="nav_link" href="#">Gift Cards</a></li>
-                        <li id="nav_item3" class="nav_item nav_item3">
-                            <button class="games_hover games_link" id="games_hover" aria-label="games" aria-haspopup="true" aria-expanded="false">Games
-                                <svg class="svg_hover" width="15" height="10" viewBox="0 0 42 25">
+                    <ul id="main-menu" class="main_nav nav_element">
+                        <li class="nav_item nav_item1 nav_element"><a class="nav_link nav_element" href="#">Book Now</a></li>
+                        <li class="nav_item nav_item2 nav_element"><a class="nav_link nav_element" href="#">Gift Cards</a></li>
+                        <li id="nav_item3" class="nav_item nav_item3 nav_element">
+                            <button id="games_hover" class="games_hover games_link nav_element"  aria-label="games" aria-haspopup="true" aria-expanded="false">Games
+                                <svg class="svg_hover nav_element" width="15" height="10" viewBox="0 0 42 25">
                                     <path d="M3 3L21 21L39 3" stroke-linecap="round">
                                 </svg>
                             </button>
-                            <ul class="dropdown">
-                                <li class="nav_item"><a  class="nav_link" href="pharaohs.html">Return of the Pharaohs</a></li>
-                                <li class="nav_item"><a  class="nav_link" href="clockwork.html">Clockwork Corridor</a></li>
+                            <ul class="dropdown nav_element">
+                                <li class="nav_item nav_element"><a  class="nav_link nav_element" href="pharaohs.html"><span class="landscape_hidden">Return of the </span>Pharaohs</a></li>
+                                <li class="nav_item nav_element"><a  class="nav_link nav_element" href="clockwork.html">Clockwork<span class="landscape_hidden"> Corridor</span></a></li>
                             </ul>
                         </li>
-                        <li class="nav_item nav_item4"><a class="nav_link" href="#faq">FAQ</a></li>
-                        <li class="nav_item nav_item5"><a class="nav_link" href="#">Waivers</a></li>
-                        <li class="nav_item nav_item6"><a class="nav_link" href="#contact">Contact</a></li>
+                        <li class="nav_item nav_item4 nav_element"><a class="nav_link nav_element" href="#faq">FAQ</a></li>
+                        <li class="nav_item nav_item5 nav_element"><a class="nav_link nav_element" href="#">Waivers</a></li>
+                        <li class="nav_item nav_item6 nav_element"><a class="nav_link nav_element" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </nav>
             <div class="welcome">
                 <img src="assets/paragon_main.png" alt="Paragon Escape Games Logo" width="865" height="627">
-                <!-- Insert Book Now Link -->
+                <a class="welcome_book" href="#">Book Now</a>
                 <!-- Insert Arrow Icon -->
             </div>
         </header>
@@ -89,16 +89,16 @@
                 <p class="note">All Games are Private Bookings</p>
                 <div class="info">
                     <section>
-                        <h3>Game Time Availability</h3>
-                        <p itemprop="openingHours" content="We-Th 16:00-20:30">Wednesday/Thursday | 4:00pm-8:30pm</p>
-                        <p itemprop="openingHours" content="Fr-Sa 10:00-22:00">Friday/Saturday | 10:00am-10:00pm</p>
-                        <p>Sunday/Monday/Tuesday | CLOSED</p>
+                        <h3>Game Times</h3>
+                        <p itemprop="openingHours" content="We-Th 16:00-20:30">Wed/Thu | 4:00pm-8:30pm</p>
+                        <p itemprop="openingHours" content="Fr-Sa 10:00-22:00">Fri/Sat | 10:00am-10:00pm</p>
+                        <p>Sun/Mon/Tue | CLOSED</p>
                     </section>
                     <section>
                         <h3>Age Limits</h3>
-                        <p>Family Groups | All Ages Allowed</p>
-                        <p>Party/Large Groups | Ages 14+ Only</p>
-                        <p class="note">An adult is required to accompany children younger than 16</p>
+                        <p>Families | All Ages Allowed</p>
+                        <p>Large Groups | Ages 14+</p>
+                        <p class="note">An adult is required to accompany children  younger than 16</p>
                     </section>
                 </div>
             </section>
@@ -107,11 +107,11 @@
                 <!-- AWARDS -->
                 <div class="awards">
                     <p>Check out the awards won by our games!</p>
-                    <div>
+                    <div class="award_pics">
                         <img src="https://paragonescape.com/media/terpeca-finalist-badge.webp" alt="Top Escape Rooms Project 2022 Finalist Award">
                         <img src="https://paragonescape.com/media/terpeca-finalist-badge.webp" alt="Top Escape Rooms Project 2023 Finalist Award">
                         <img src="https://paragonescape.com/media/morty-badge.webp" alt="Morty Top Escape Room 2022 Award">
-                        <img src="https://paragonescape.com/media/golden-lock-award.webp" alt="Golden Lock Award 2022">
+                        <img class="awards_fix" src="https://paragonescape.com/media/golden-lock-award.webp" alt="Golden Lock Award 2022">
                         <img src="https://paragonescape.com/media/bullseye-badge.webp" alt="Bullseye Award 2022">
                     </div>
                 </div>
@@ -130,11 +130,11 @@
                     </div>
                     <!-- <a class="mini-book" href="#">Book Now</a> -->
                     <div class="room-info">
-                        <p>In the realm of steampunk chaos, Lord Phineas Sterling has hired your gang to retrieve his magical Æther from the infamous "Clockwork Corridor" run by none other than Vincent Vondæther, an ominous alchemist.</p>
-                        <p>Because of Vincent's power hungry nature, he has stolen Lord Phineas Sterling's prized Æther to use in his twisted inventions.</p>
+                        <p>You're the ancient souls of the Egyptian pharaohs, whose afterlife abilities were bound by Set, the god of chaos.</p>
+                        <p>Your only ally is the sun god, Ra. Alas, Ra’s powers have become limited due to the dwindling of sacrifices and offerings dedicated to him over the centuries.</p>
                         <div class="video">
                             <iframe title="Clockwork Corridor Trailer"
-                              class="video__iframe"
+                              class="video__iframe yt_hidden"
                               width="560"
                               height="315"
                               data-src="https://www.youtube-nocookie.com/embed/yDGox0JTRZM?si=vGFCkrkpFXLz98ou"
@@ -160,6 +160,7 @@
                 <!-- CLOCKWORK CORRIDOR -->
                 <section id="clockwork">
                     <!-- <a class="mini-book" href="#">Book Now</a> -->
+                    <h3>Clockwork Corridor</h3>
                     <div class="basic-info">
                         <div>
                             <img alt="Player count icon" src="assets/players-i.png">
@@ -167,16 +168,15 @@
                         </div>
                         <div>
                             <img alt="Price per player icon" src="assets/price-i.png">
-                            <p>$35/P</p>
+                            <p>$35</p>
                         </div>
                     </div>
-                    <h3>Clockwork Corridor</h3>
                     <div class="room-info">
-                        <p>You're the ancient souls of the Egyptian pharaohs, whose afterlife abilities were bound by Set, the god of chaos.</p>
-                        <p>Your only ally is the sun god, Ra. Alas, Ra’s powers have become limited due to the dwindling of sacrifices and offerings dedicated to him over the centuries.</p>
+                        <p>In the realm of steampunk chaos, Lord Phineas Sterling has hired your gang to retrieve his magical Æther from the infamous "Clockwork Corridor" run by none other than Vincent Vondæther, an ominous alchemist.</p>
+                        <p>Because of Vincent's power hungry nature, he has stolen Lord Phineas Sterling's prized Æther to use in his twisted inventions.</p>
                         <div class="video">
                             <iframe title="Clockwork Corridor Trailer"
-                              class="video__iframe"
+                              class="video__iframe yt_hidden"
                               width="560"
                               height="315"
                               data-src="https://www.youtube-nocookie.com/embed/yDGox0JTRZM?si=vGFCkrkpFXLz98ou"
