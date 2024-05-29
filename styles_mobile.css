@@ -703,7 +703,7 @@ svg {
             }
         }
 
-        @media only screen and (max-height: 650px) and (orientation: landscape) {
+        @media only screen and (max-height: 775px) and (max-width: 1199.5px) and (orientation: landscape) {
             .main_nav {
                 flex-direction: row;
                 justify-content: space-evenly;
@@ -711,6 +711,15 @@ svg {
 
             .main_nav.active {
                 max-height: 220px;
+            }
+
+            .nav_link, .games_hover {
+                font-size: 0.85rem;
+            }
+
+            .games_hover .svg_hover {
+                width: 0.65rem;
+                margin-top: 5px;
             }
 
             .dropdown a {
