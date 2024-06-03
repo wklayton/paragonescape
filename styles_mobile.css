@@ -509,16 +509,20 @@ svg {
                 }
 
                 .nav_item3:focus-within .dropdown {
-                    max-height: 200px;
+                    max-height: 8.6rem;
                 }
 
                 .dropdown a {
                     visibility: hidden;
-                    font-size: 1rem;
+                    font-size: 1.4rem;
                 }
 
                 .dropdown li {
                     width: 0;
+                }
+
+                .dropdown .nav_item:last-child {
+                    margin-bottom: 0;
                 }
 
                 .nav_item3:focus-within .dropdown a {
@@ -547,6 +551,14 @@ svg {
                 .games_hover {
                     font-size: 1.3rem;
                 }
+
+                .dropdown a {
+                    font-size: 1.1rem;
+                }
+
+                .nav_item3:focus-within .dropdown {
+                    max-height: 7rem;
+                }
             }
 
             @media only screen and (min-width: 520px){
@@ -566,6 +578,14 @@ svg {
                     left: 86%;
                     top: 32px;
                     width: 45px;
+                }
+
+                .dropdown a {
+                    font-size: 0.85rem;
+                }
+
+                .nav_item3:focus-within .dropdown {
+                    max-height: 6.2rem;
                 }
 
                 .ham_bar {
@@ -598,6 +618,10 @@ svg {
 
                 .games_hover {
                     font-size: 1rem;
+                }
+
+                .nav_item3:focus-within .dropdown {
+                    max-height: 5.4rem;
                 }
             }
 
@@ -707,10 +731,23 @@ svg {
             .main_nav {
                 flex-direction: row;
                 justify-content: space-evenly;
+                position: absolute;
+                height: fit-content;
             }
 
             .main_nav.active {
-                max-height: 220px;
+                max-height: 3.5rem;
+            }
+            .main_nav > .nav_item, .nav_item3 {
+                height: min-content;
+            }
+
+            .nav_item {
+                margin-bottom: 10px;
+            }
+
+            .nav_item6 {
+                margin-bottom: 0;
             }
 
             .nav_link, .games_hover {
@@ -722,13 +759,29 @@ svg {
                 margin-top: 5px;
             }
 
+            .dropdown .nav_item:first-child {
+                margin-top: 0.5rem;
+            }
+
             .dropdown a {
                 font-size: 0.75rem;
             }
 
-            .nav_item3:focus-within{
-                margin-right: -20px;
-                margin-left: -20px;
+            .nav_item3:focus-within .dropdown {
+                max-height: 6rem;
+            }
+
+            .nav_item3 .dropdown {
+                width: 100%;
+                position: fixed;
+                overflow: hidden;
+                left: calc(-50% + 50%);
+                background-color: var(--black);
+                box-shadow: 0 0.5rem 0.7rem rgba(5, 5, 6, 0.95);
+            }
+
+            .dropdown .nav_item:last-child {
+                padding-bottom: 10px;
             }
         }
 /* NAVIGATION END */
@@ -814,7 +867,6 @@ svg {
     }
 /* #INFO */
     #info {
-        width: 75%;
         margin-top: 2.3rem;
     }
 
@@ -847,6 +899,8 @@ svg {
 
         .info {
             display: grid;
+            width: 80%;
+            margin: 0 auto;
             grid-template-columns: 50% 50%;
             justify-content: space-between;
             text-align: center;
@@ -905,6 +959,10 @@ svg {
 
     /* AWARDS END */
     /* GAME SECTIONS */
+        #games section {
+            margin: 2rem 0;
+        }
+
         .basic-info p, .room-info > p {
             text-shadow: .2rem .2rem .15rem var(--deep-black);
         }
@@ -963,36 +1021,45 @@ svg {
         }
 
         #games .video__notice button {
-            font-size: 1rem;
-            padding: 1.5%;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 1.5% 3%;
             margin-top: 0.25rem;
             border: none;
+            outline: 3px solid var(--orange);
             cursor: pointer;
             background-color: var(--white);
-            border-radius: 0.1rem;
+            color: var(--black);
+            border-radius: 0.025rem;
+            opacity: 0.95;
         }
 
         #games .video__notice button:hover, #games .video__notice button:focus-visible {
             color: var(--white);
             background-color: var(--orange);
+            outline-color: var(--white);
         }
 
         #games form {
             padding: 2%;
-            background-color: rgba(16, 16, 20, 0.55);
+            background-color: rgba(16, 16, 20, 0.65);
             border: 1px solid var(--orange);
             width: fit-content;
             border-radius: 0.2rem;
         }
 
-        .yt_hidden {
+        #games .video__iframe.yt_hidden {
             max-height: 0;
             visibility: hidden;
+            padding: 0;
+            margin: 0;
         }
 
-        .notice_hidden {
+        #games .video__notice.notice_hidden {
             max-height: 0;
             visibility: hidden;
+            padding: 0;
+            margin: 0;
         }
 
         .room-menu {
@@ -1006,7 +1073,7 @@ svg {
             font-weight: 500;
             padding:0.75rem 1.8rem;
             font-size: 1.3rem;
-            border: 1px solid var(--orange);
+            border: 3px solid var(--orange);
             border-radius: 0.15rem;
         }
 
@@ -1020,7 +1087,7 @@ svg {
         .learn:hover, .learn:focus-visible {
             color: var(--orange);
             background-color: var(--white);
-            border: 1px solid var(--white);
+            border-color: var(--white);
             text-shadow: none;
         }
 
@@ -1037,7 +1104,7 @@ svg {
         .book:hover, .book:focus-visible {
             color: var(--orange);
             background-color: var(--white);
-            border: 1px solid var(--white);
+            border-color: var(--white);
         }
 
         .book:focus-visible {
@@ -1100,7 +1167,6 @@ svg {
             #games .video__iframe {
                 display: block;
                 width: 30rem;
-                margin-bottom: -2rem;
                 box-shadow: 0rem 0rem 0.75rem 0.15rem rgba(2, 2, 6, 0.6);
             }
 
@@ -1114,7 +1180,6 @@ svg {
 
             #games form {
                 width: 60%;
-                margin-top: 1.5rem;
                 box-shadow: 0rem 0rem 0.75rem 0.15rem rgba(2, 2, 6, 0.6);
             }
 
@@ -1135,9 +1200,7 @@ svg {
                 margin-left: auto;
             }
 
-            .room-menu {
-                margin: 1rem 0;
-            }
+            
 
             #pharaohs .room-menu {
                 justify-content: flex-start;
@@ -1170,15 +1233,283 @@ svg {
                 margin-top: -0.2rem;
             }
         /* Clockwork End */
+    /* GAMES END */
+    /* ABOUT */
+            #about {
+                text-align: center;
+            }
 
+            .why {
+                width: 65%;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
-/* #CONTACT */
-address {
-    cursor: pointer;
-}
-/* #CONTACT END */
+            .why p {
+                font-size: 1.1rem;
+            }
 
+            @media screen and (min-width: 1200px) {
+                .why {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: space-between;
+                    width: 80%;
+                }
+
+                .why section {
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .why h3 {
+                    font-size: 1.35rem;
+                }
+
+                .why p {
+                    font-size: 0.9rem;
+                }
+            }
+        /* ABOUT END */
+
+        /* FAQs */
+            #faq h2 {
+                padding-top: 6rem;
+                margin-top: -5rem;
+            }
+
+            #faq hgroup p {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: var(--orange);
+                letter-spacing: 15;
+            }
+
+            #faq hgroup {
+                padding-bottom: 2rem;
+                border-bottom: 2px solid var(--lt-gray);
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            #faq button {
+                background-color: transparent;
+                width: 100%;
+                border-left: none;
+                border-right: none;
+                border-top: none;
+            }
+        
+            #faq a {
+                color: var(--white);
+                text-decoration: none;
+                font-weight: 400;
+            }
+                
+            #faq a:hover, #faq a:focus {
+                color: var(--orange);
+            }
+
+            .faq_box h4 {
+                color: var(--white);
+                font-weight: 500;
+                font-size: 1.3rem;
+            }
+
+            #faq p {
+                font-size: 1.3rem;
+                color: var(--lt-gray);
+            }
+
+            .faq_section {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .faq_box {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                margin-top: 0.2rem;
+                border-bottom: 2px solid var(--lt-gray);
+                cursor: pointer;
+            }
+
+            .question {
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: center;
+                gap: 1rem;
+                align-items: center;
+                width: fit-content;
+                margin: 0 auto;
+            }
+
+            .answer {
+                max-height: 0;
+                overflow: hidden;
+                visibility: hidden;
+                transition: max-height 0.3s ease-in-out;
+            }
+
+            .question svg {
+                stroke: var(--white);
+                stroke-width: 6.5;
+                width: 1.3rem;
+                height: auto;
+                transition: transform 0.15s ease-in-out;
+            }
+
+            #faq .faq_box:focus-visible {
+                outline: 5px solid var(--orange);
+            }
+
+            .faq_box.active h4 {
+                color: var(--orange);
+            }
+
+            .faq_box.active .question svg {
+                stroke: var(--orange);
+                transform: rotate(-180deg);
+            }
+
+            .faq_box.active .answer {
+                visibility: visible;
+            }
+
+            .faq_box:first-of-type.active .answer {
+                max-height: 5rem;
+            }
+            
+            .faq_box:nth-of-type(2n).active .answer {
+                max-height: 10rem;
+            }
+
+            .faq_box:nth-of-type(3n).active .answer {
+                max-height: 15rem;
+            }
+
+            .faq_box:nth-of-type(4n).active .answer {
+                max-height: 5rem;
+            }
+
+            .faq_box:nth-of-type(5n).active .answer {
+                max-height: 19rem;
+            }
+
+            .faq_box:nth-of-type(6n).active .answer {
+                max-height: 9rem;
+            }
+
+            .faq_box:nth-of-type(7n).active .answer {
+                max-height: 26rem;
+            }
+
+            .faq_box:nth-of-type(8n).active .answer {
+                max-height: 21rem;
+            }
+
+            .faq_box:last-of-type.active .answer {
+                max-height: 33rem;
+            }
+
+            @media screen and (min-width: 750px) {
+                .faq_box h4 {
+                    font-size: 0.95rem;
+                }
+
+                #faq p {
+                    font-size: 0.85rem;
+                }
+
+                .question svg {
+                    width: 0.75rem;
+                }
+            }
+
+            @media screen and (min-width: 1200px) {
+                #faq hgroup {
+                    margin-left: 10%;
+                }
+
+                .question {
+                    margin-left: 0;
+                }
+                
+                .answer p {
+                    text-align: left;
+                }
+            }
+
+    /* FAQs END */
+    /* #CONTACT */
+        #contact {
+            text-align: center;
+        }
+
+        #contact h2 {
+            width: fit-content;
+            padding: 0 2.3rem;
+            border-bottom: 2px solid var(--orange);
+            margin: 0 auto 2rem auto;
+        }
+
+        #contact address {
+            margin-top: 3rem;
+        }
+
+        #contact a {
+            display: block;
+            width: fit-content;
+            margin: 2rem auto;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        #contact a:hover, #contact a:focus-visible {
+            color: var(--orange);
+        }
+    /* #CONTACT END */
 /* MAIN END */
+/* FOOTER */
+    footer {
+        padding: 2% 0 3%;
+        text-align: center;
+        background-color: var(--black);
+    }
+
+    footer .note {
+        margin: 0 auto 1rem;
+    }
+
+    footer button {
+        font: inherit;
+        padding: 0.3rem 0.5rem;
+        background-color: var(--dk-gray);
+        border: 2px solid var(--lt-gray);
+        border-radius: 0.25rem;
+        color: var(--lt-gray);
+        cursor: pointer;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        font-size: 0.65rem;
+        opacity: 0.5;
+    }
+
+    footer button:hover, footer button:focus-visible {
+        color: var(--orange);
+        background-color: var(--white);
+        border-color: var(--white);
+        opacity: 1;
+    }
+
+    footer button:focus-visible {
+        outline: 5px solid var(--orange);
+    }
+
+/* FOOTER END */
 
 /* h2 hash fix */
 /* padding-top: 70px;

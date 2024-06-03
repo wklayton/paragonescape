@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="styles_mobile.css">
     </head>
     <body itemscope itemtype="https://schema.org/EntertainmentBusiness">
+        <meta itemprop="isAccessibleForFree" content="false">
         <header>
             <nav class="nav_element" aria-labelledby="menu-icon">
                 <div class="full_nav nav_element">
@@ -67,8 +68,8 @@
                                 </svg>
                             </button>
                             <ul class="dropdown nav_element">
-                                <li class="nav_item nav_element"><a  class="nav_link nav_element" href="pharaohs.html"><span class="landscape_hidden">Return of the </span>Pharaohs</a></li>
-                                <li class="nav_item nav_element"><a  class="nav_link nav_element" href="clockwork.html">Clockwork<span class="landscape_hidden"> Corridor</span></a></li>
+                                <li class="nav_item nav_element"><a  class="nav_link nav_element" href="pharaohs.html">Return of the Pharaohs</a></li>
+                                <li class="nav_item nav_element"><a  class="nav_link nav_element" href="clockwork.html">Clockwork Corridor</a></li>
                             </ul>
                         </li>
                         <li class="nav_item nav_item4 nav_element"><a class="nav_link nav_element" href="#faq">FAQ</a></li>
@@ -78,7 +79,7 @@
                 </div>
             </nav>
             <div class="welcome">
-                <img src="assets/paragon_main.png" alt="Paragon Escape Games Logo" width="865" height="627">
+                <img itemprop="logo" src="assets/paragon_main.png" alt="Paragon Escape Games Logo" width="865" height="627">
                 <a class="welcome_book" href="#">Book Now</a>
                 <!-- Insert Arrow Icon -->
             </div>
@@ -88,6 +89,7 @@
                 <h2>Information</h2>
                 <p class="note">All Games are Private Bookings</p>
                 <div class="info">
+                    <meta itemprop="currenciesAccepted" content="USD">
                     <section>
                         <h3>Game Times</h3>
                         <p itemprop="openingHours" content="We-Th 16:00-20:30">Wed/Thu | 4:00pm-8:30pm</p>
@@ -117,11 +119,11 @@
                 </div>
                 <!-- RETURN OF THE PHARAOHS -->
                 <section id="pharaohs">
-                    <h3>Return of the Pharaohs</h3>
+                    <h3 itemprop="containedInPlace">Return of the Pharaohs</h3>
                     <div class="basic-info">
                         <div>
                             <img alt="Player count icon" src="assets/players-i.png">
-                            <p>4-10</p>
+                            <p itemprop="maximumAttendeeCapacity">4-10</p>
                         </div>
                         <div>
                             <img alt="Price per player icon" src="assets/price-i.png">
@@ -226,113 +228,113 @@
                     <p>Answers to common questions below.</p>
                 </hgroup>
                 <div class="faq_section">
-                    <div class="faq_box">
+                    <button class="faq_box">
                         <div class="question">
                             <h4>How much does it cost?</h4>
                             <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                                <path d="M3 3L21 21L39 3" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div class="answer">
                             <p>Our games are $35 per person.</p>
                         </div>
-                    </div>
+                    </button>
 
-                    <div class="faq_box">
+                    <button class="faq_box">
                         <div class="question">
                             <h4>Are the games public or private bookings?</h4>
                             <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                                <path d="M3 3L21 21L39 3" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div class="answer">
                             <p>All bookings are private. You and your party will have the room to yourselves for the entirety of your game time.</p>
                         </div>
-                    </div>
+                    </button>
 
-                    <div class="faq_box">
+                    <button class="faq_box">
                         <div class="question">
                             <h4>Do I need to book in advance?</h4>
                             <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                                <path d="M3 3L21 21L39 3" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div class="answer">
                             <p>Yes, games must be<a href="#"> booked online</a> or by phone at least 2 hours ahead of your game time. <a href="#contact">Contact us</a> to inquire about the current availability of game times or if you have further questions.</p>
                         </div>
-                    </div>
+                    </button>
 
-                    <div class="faq_box">
+                    <button class="faq_box">
                         <div class="question">
                             <h4>How long are the games?</h4>
                             <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                                <path d="M3 3L21 21L39 3" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div class="answer">
                             <p>Most games are between 60-70 minutes</p>
                         </div>
-                    </div>
+                    </button>
 
-                    <div class="faq_box">
+                    <button class="faq_box">
                         <div class="question">
                             <h4>What is the age limit?</h4>
                             <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                                <path d="M3 3L21 21L39 3" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div class="answer">
                             <p>In family groups all ages are allowed. For party or large groups all ages must be at least 14. All youth under the age of 16 must be accompanied by at least 1 adult. <a href="#contact">Contact us</a> to discuss exceptions.</p>
                         </div>
-                    </div>
+                    </button>
 
-                    <div class="faq_box">
+                    <button class="faq_box">
                         <div class="question">
                             <h4>Am I really locked in?</h4>
                             <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                                <path d="M3 3L21 21L39 3" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div class="answer">
                             <p>No. For safety purposes the room doors are never locked.</p>
                         </div>
-                    </div>
+                    </button>
 
-                    <div class="faq_box">
+                    <button class="faq_box">
                         <div class="question">
                             <h4>What happens if I'm late?</h4>
                             <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                                <path d="M3 3L21 21L39 3" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div class="answer">
                             <p>There are no guarantees for a game experience if you are late. If you miss your game time, depending on scheduling, you may have to book another day and time for your game experience. Please make sure your group arrives 15 minutes early.</p>
                         </div>
-                    </div>
+                    </button>
 
-                    <div class="faq_box">
+                    <button class="faq_box">
                         <div class="question">
                             <h4>What if I have a team of more than 10 players?</h4>
                             <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                                <path d="M3 3L21 21L39 3" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div class="answer">
                             <p><a href="#contact">Contact us</a> to find out the best options to help accommodate your group. Corporate events are welcome and it is helpful to contact us at least a week in advance to give your team the best experience.</p>
                         </div>
-                    </div>
+                    </button>
 
-                    <div class="faq_box">
+                    <button class="faq_box">
                         <div class="question">
                             <h4>Do we accommodate pregnant or handicapped people?</h4>
                             <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                                <path d="M3 3L21 21L39 3" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div class="answer">
                             <p>Yes. Although every game is not fully wheelchair or physically handicap accessible, we will do everything we can to accommodate your needs. Depending on the game and your needs, please <a href="#contact">contact us</a> so that we may help you decide what game would be best for your party. Be aware there may be flickering lights, sounds, and startling surprises. <a href="#contact">Contact us</a> for more details.</p>
                         </div>
-                    </div>
+                    </button>
                 </div>
             </section>
             <section id="contact">
@@ -348,18 +350,20 @@
                     </form>
                 </div> -->
                 <h2>Contact Info</h2>
-                <a itemprop="hasMap" onclick="mapsSelector()">
-                    <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                        <address><span itemprop="streetAddress">7257 S Atwood #103</span> <span itemprop="addressLocality">Mesa</span>, <span itemprop="addressRegion">AZ</span> <span itemprop="postalCode">85212</span> <span itemprop="addressCountry">USA</span></address>
+                <address>
+                    <div itemprop="hasMap">
+                        <a href="https://www.google.com/maps/place/Paragon+Escape+Games/@33.2838943,-111.6435594,17z/data=!4m6!3m5!1s0x872bb3c2f1cff71f:0xae04c6f42fa38ff!8m2!3d33.2838898!4d-111.6409845!16s%2Fg%2F11grbwfvbw?entry=ttu" target="_blank" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                            <span itemprop="streetAddress">7257 S Atwood #103</span> <span itemprop="addressLocality">Mesa</span>, <span itemprop="addressRegion">AZ</span> <span itemprop="postalCode">85212</span> <span itemprop="addressCountry">USA</span>
+                        </a>
                     </div>
-                </a>
-                <a href="mailto:info@paragonescape.com" itemprop="email">info@paragonescape.com</a>
-                <a href="tel:+14809875242" itemprop="telephone">(480) 987-5242</a>
+                    <a href="mailto:info@paragonescape.com" itemprop="email">info@paragonescape.com</a>
+                    <a href="tel:+14809875242" itemprop="telephone">(480) 987-5242</a>
+                </address>
             </section>
         </main>
         <footer>
+            <p class="note">&copy; <span itemprop="legalName">Paragon Escape Games LLC </span> 2024</p>
             <button button-name="Disable Cookies" onclick="deactivateCookies()">Disable Cookies</button>
-            <p class="note">&copy; Paragon Escape Games LLC 2024</p>
         </footer>
         <!-- JAVASCRIPT LINKS HERE -->
         <script src="index.js"></script>
