@@ -69,8 +69,18 @@ hamburger.addEventListener("click", mobileMenu);
 function mobileMenu() {
     hamburger.classList.toggle("active");
     mainNav.classList.toggle("active");
+    ariaExpUpdater();
 }
 
+function closeMenu() {
+  hamburger.classList.remove("active");
+  mainNav.classList.remove("active");
+  ariaExpUpdater();
+}
+
+// Close the menu when a link is pressed
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+navLink2.forEach(n => n.addEventListener("click", closeMenu));
 
 window.addEventListener('click', function(e) {
   if (e.target.className.includes("nav_element") != true) {
@@ -78,30 +88,19 @@ window.addEventListener('click', function(e) {
   }
 });
 
-// Close the menu when a link is pressed
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-navLink2.forEach(n => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    mainNav.classList.remove("active");
-}
-
 // Close menu with the escape key and focus on hamburger menu
 window.addEventListener('keydown', function(e) {
   if ((e.key === "Escape") && (hamburger.classList.contains("active"))) {
       this.document.getElementById("menu-icon").focus();
-      ariaExpUpdater();
-      hamburger.classList.remove("active");
-      mainNav.classList.remove("active");
+      closeMenu();
     }
 });
 
 // Update the Aria-Expanded attribute for the hamburger menu
-function ariaExpUpdater() {
-  let hamExpValue = document.getElementById("menu-icon").getAttribute("aria-expanded");
+let hamExpValue = "false";
 
-  if (hamburger.classList.contains("active")) {
+function ariaExpUpdater() {
+  if (hamburger.classList.contains("active") != true) {
   hamExpValue = "false"
   } else {
   hamExpValue = "true"
@@ -129,29 +128,3 @@ gamesMenu.addEventListener("focusin", (event) => {
 gamesMenu.addEventListener("focusout", (event) => {
   dropdownMenu.setAttribute("aria-expanded", "false"), 1;
 });
-
-
-
-// faq .active toggle
-const faqs = document.querySelectorAll(".faq_box");
-
-faqs.forEach(faqBox => {
-  faqBox.addEventListener("click", () => {
-    faqBox.classList.toggle("active");
-  })
-});
-
-
-
-// Opens apple maps if on apple
-// Need a better solution
-    // function mapsSelector() {
-    //   if
-    //     ((navigator.platform.indexOf("iPhone") != -1) || 
-    //     (navigator.platform.indexOf("iPad") != -1) || 
-    //     (navigator.platform.indexOf("iPod") != -1)) {
-    //     window.open("geo:33.2838943,-111.6435594");
-    //     } else {
-    //     window.open("https://www.google.com/maps/place/Paragon+Escape+Games/@33.2838943,-111.6435594,17z/data=!3m1!4b1!4m6!3m5!1s0x872bb3c2f1cff71f:0xae04c6f42fa38ff!8m2!3d33.2838898!4d-111.6409845!16s%2Fg%2F11grbwfvbw?entry=ttu");
-    //     }
-    // }
