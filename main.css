@@ -31,7 +31,7 @@
             font-size: 2rem;
             font-weight: 700;
             background-color: var(--orange);
-            color: var(--white);
+            color: var(--black);
             border: none;
             cursor: pointer;
             box-shadow: 0rem 0rem 0.75rem 0.15rem rgba(2, 2, 6, 0.6);

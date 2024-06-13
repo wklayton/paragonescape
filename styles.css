@@ -382,8 +382,9 @@ svg {
         /* .main_nav */
             /* .nav_item */
             .nav_item {
-                margin: 1.5rem auto 0;
+                margin: 1rem auto 0;
                 width: fit-content;
+                line-height: 2;
             }
 
             .nav_item6 {
@@ -399,12 +400,6 @@ svg {
 
             .height_adj {
                 height: 24px;
-            }
-
-            .games_hover {
-                background-color: transparent;
-                border: none;
-                padding: 0;
             }
 
             .nav_link:hover, .nav_link:focus, .games_link:hover, .games_hover:focus, .nav_item3:focus-within button {
@@ -426,7 +421,8 @@ svg {
                 color: var(--white);
                 font-size: 2rem;
                 font-weight: 500;
-                line-height: 2;
+                line-height: 1;
+                padding: 0;
             }
 
             .svg_hover {
@@ -440,6 +436,10 @@ svg {
             .games_hover:hover .svg_hover, .games_hover:focus .svg_hover, .nav_item3:focus-within .svg_hover {
                 stroke: var(--orange);
                 
+            }
+
+            .dropdown .nav_item {
+                margin: 1rem auto;
             }
 
             .dropdown .nav_link {
@@ -500,6 +500,7 @@ svg {
                     -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, scale 0.3s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
                     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, scale 0.3s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
                     border: 1px solid var(--white);
+                    border-radius: 1rem;
                     background-color: var(--white);
                     margin-bottom: 5px;
                 }
@@ -529,7 +530,7 @@ svg {
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height 0.3s ease-in-out;
-                    padding: 0;
+                    padding: 0 1rem;
                 }
 
                 .nav_item3:focus-within .dropdown {
@@ -543,6 +544,10 @@ svg {
 
                 .dropdown li {
                     width: 0;
+                }
+
+                .dropdown .nav_item {
+                    margin: 0.5rem auto;
                 }
 
                 .dropdown .nav_item:last-child {
@@ -632,10 +637,6 @@ svg {
                     font-size: 0.9rem;
                 }
 
-                .nav_item {
-                    margin: 1rem auto;
-                }
-
                 .nav_item svg {
                     width: 0.75rem;
                     margin-bottom: 0;
@@ -643,10 +644,6 @@ svg {
 
                 .games_hover {
                     font-size: 1rem;
-                }
-
-                .nav_item3:focus-within .dropdown {
-                    max-height: 5.4rem;
                 }
             }
 
@@ -699,6 +696,8 @@ svg {
 
                 .dropdown {
                     visibility: visible;
+                    padding-left: 0;
+                    padding-right: 0;
                     overflow: hidden;
                     position: absolute;
                     background-color: var(--black);
@@ -720,6 +719,7 @@ svg {
                     padding: 0 1rem 0.5rem 1rem;
                     text-align: left;
                     margin-left: 0;
+                    line-height: 1;
                 }
 
                 .nav_item3:focus-within .dropdown, .nav_item3:hover .dropdown { 
@@ -819,14 +819,14 @@ footer button {
     font: inherit;
     padding: 0.3rem 0.5rem;
     background-color: var(--dk-gray);
-    border: 2px solid var(--lt-gray);
+    border: 2px solid var(--white);
     border-radius: 0.25rem;
-    color: var(--lt-gray);
+    color: var(--white);
     cursor: pointer;
     font-weight: 500;
     letter-spacing: 0.1rem;
     font-size: 0.65rem;
-    opacity: 0.5;
+    opacity: 0.85;
 }
 
 footer button:hover, footer button:focus-visible {
