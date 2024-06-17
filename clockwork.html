@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
     <head>
         <meta charset="utf-8">
         <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src https://www.youtube-nocookie.com https://www.google.com/maps/embed; img-src 'self' https://p.typekit.net https://use.typekit.net https://*.paragonescape.com/; script-src 'self' https://use.typekit.net; style-src 'self' 'unsafe-inline' https://use.typekit.net https://p.typekit.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://use.typekit.net; connect-src https://performance.typekit.net;"> -->
@@ -10,7 +10,7 @@
         <meta name="author" content="Wesley Layton">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, shrink-to-fit=no">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="canonical" href="#">
+        <!-- <link rel="canonical" href="#"> -->
         <meta name="robots" content="index, follow">
         <!-- SCHEMA MARKUP -->
         <meta itemprop="inLanguage" content="en-US">
@@ -24,7 +24,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body itemscope itemtype="http://schema.org/TouristAttraction">
         <header>
             <nav class="nav_element" aria-labelledby="menu-icon">
                 <div class="full_nav nav_element">
@@ -64,8 +64,8 @@
                         <!-- End of img -->
                         <h1 class="nav_element" itemprop="name"><span class="paragon nav_element">Paragon </span><br><span class="escape nav_element">Escape Games</span></h1>
                     </a>
-                    <meta itemprop="url" content="https://paragonescape.com/">
-                    <button id="menu-icon" class="hamburger nav_element" aria-label="open-menu" aria-haspopup="true" aria-expanded="false" aria-controls="main-menu" onclick="ariaExpUpdater(), ariaLabelUpdater()">
+                    <meta itemprop="url" content="https://paragonescape.com/clockwork">
+                    <button id="menu-icon" class="hamburger nav_element" aria-label="open-menu" aria-haspopup="true" aria-expanded="false" aria-controls="main-menu" onclick="ariaLabelUpdater()">
                         <span class="ham_bar nav_element"></span>
                         <span class="ham_bar nav_element"></span>
                         <span class="ham_bar nav_element"></span>
@@ -73,15 +73,17 @@
                     <ul id="main-menu" class="main_nav nav_element">
                         <li class="nav_item nav_item1 nav_element"><a class="nav_link nav_element" href="#">Book Now</a></li>
                         <li class="nav_item nav_item2 nav_element"><a class="nav_link nav_element" href="#">Gift Cards</a></li>
-                        <li id="nav_item3" class="nav_item nav_item3 nav_element">
-                            <button id="games_hover" class="games_hover games_link nav_element"  aria-label="games" aria-haspopup="true" aria-expanded="false">Games
-                                <svg class="svg_hover nav_element" width="15" height="10" viewBox="0 0 42 25">
-                                    <path d="M3 3L21 21L39 3" stroke-linecap="round"></path>
-                                </svg>
-                            </button>
-                            <ul class="dropdown nav_element">
-                                <li class="nav_item nav_element"><a  class="nav_link nav_element" href="pharaohs.html">Return of the Pharaohs</a></li>
-                                <li class="nav_item nav_element"><a  class="nav_link nav_element" href="#">Clockwork Corridor</a></li>
+                        <li id="nav_item3" class="nav_item nav_item3 nav_element games_menu">
+                            <div class="games_button_fix nav_element games_menu">
+                                <button id="games_hover" class="games_hover games_link nav_element games_menu" aria-label="Open Games Submenu" aria-haspopup="true" aria-expanded="false" onclick="gamesToggleActive()">Games
+                                    <svg class="svg_hover nav_element games_menu" width="15" height="10" viewBox="0 0 42 25">
+                                        <path d="M3 3L21 21L39 3" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <ul class="dropdown nav_element games_menu">
+                                <li class="nav_item nav_element games_menu"><a  class="nav_link nav_element games_menu" href="pharaohs.html">Return of the Pharaohs</a></li>
+                                <li class="nav_item nav_element games_menu"><a  class="nav_link nav_element games_menu" href="#">Clockwork Corridor</a></li>
                             </ul>
                         </li>
                         <li class="nav_item nav_item4 nav_element"><a class="nav_link nav_element" href="index.html#faq">FAQ</a></li>
@@ -91,7 +93,8 @@
                 </div>
             </nav>
             <div class="clockwork_welcome games_welcome">
-                <h2>Clockwork Corridor</h2>
+                <h2 itemprop="name">Clockwork Corridor</h2>
+                <meta itemprop="alternateName" content="Steampunk Room">
                 <a class="games_book" href="#">Book Now</a>
             </div>
         </header>
@@ -107,7 +110,7 @@
                         <p>Set in an alternate timeline, “Clockwork Corridor,” is immersed in Victorian Steampunk culture and sophistication. Retro-futuristic inventions dominate this industrial steam-powered society and the race for power keeps man driven. The science of alchemy, which uses rare chemicals to create elixirs, can empower these mechanized gadgets. This is the root of Vincent Vondæther’s distorted success.</p>
                         <button aria-label="Read Less" onclick="toggleOverviewOff()">Read Less</button>
                     </div>
-                    <button class="less" aria-label="Read More" onclick="toggleOverviewOn()">Read More</button>
+                    <button class="more_btn" aria-label="Read More" onclick="toggleOverviewOn()">Read More</button>
                 </section>
                 <section id="games_info">
                     <div>
@@ -119,12 +122,28 @@
                         <div>
                             <img alt="Icon of 3 people" src="assets/players.png">
                             <h3>Players</h3>
-                            <p>4-10</p>
+                            <p itemprop="maximumAttendeeCapacity">4-10</p>
                         </div>
                         <div>
                             <img alt="Icon of money" src="assets/price.png">
                             <h3>Price</h3>
                             <p>$35 per Player</p>
+                            <meta itemprop="isAccessibleForFree" content="false">
+                        </div>
+                        <meta itemprop="availableLanguage" content="English">
+                        <meta itemprop="touristType" content="Families">
+                        <meta itemprop="touristType" content="Friends">
+                        <meta itemprop="touristType" content="Escape Room Tourism">
+                        <div itemscope itemprop="containedInPlace" itemtype="http://schema.org/EntertainmentBusiness">
+                            <meta itemprop="name" content="Paragon Escape Games">
+                            <meta itemprop="url" content="https://paragonescape.com">
+                            <div itemscope itemprop="address" itemtype="http://schema.org/PostalAddress">
+                                <meta itemprop="streetAddress" content="7257 S Atwood #103">
+                                <meta itemprop="addressLocality" content="Mesa">
+                                <meta itemprop="addressRegion" content="AZ">
+                                <meta itemprop="postalCode" content="85212">
+                                <meta itemprop="addressCountry" content="USA">
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -171,7 +190,7 @@
             </div>
         </main>
         <footer>
-            <p class="note">&copy; <span itemprop="legalName">Paragon Escape Games LLC </span> 2024</p>
+            <p class="note">&copy; Paragon Escape Games LLC 2024</p>
             <button name="Disable Cookies" onclick="deactivateCookies()">Disable Cookies</button>
         </footer>
         <!-- JAVASCRIPT LINKS HERE -->

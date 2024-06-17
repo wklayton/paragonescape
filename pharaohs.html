@@ -8,7 +8,7 @@
         <meta name="author" content="Wesley Layton">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, shrink-to-fit=no">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="canonical" href="#">
+        <!-- <link rel="canonical" href="#"> -->
         <meta name="robots" content="index, follow">
         <!-- SCHEMA MARKUP -->
         <meta itemprop="inLanguage" content="en-US">
@@ -63,7 +63,7 @@
                         <h1 class="nav_element"><span class="paragon nav_element">Paragon </span><br><span class="escape nav_element">Escape Games</span></h1>
                     </a>
                     <meta itemprop="url" content="https://paragonescape.com/pharaohs">
-                    <button id="menu-icon" class="hamburger nav_element" aria-label="open-menu" aria-haspopup="true" aria-expanded="false" aria-controls="main-menu" onclick="ariaExpUpdater(), ariaLabelUpdater()">
+                    <button id="menu-icon" class="hamburger nav_element" aria-label="open-menu" aria-haspopup="true" aria-expanded="false" aria-controls="main-menu" onclick="ariaLabelUpdater()">
                         <span class="ham_bar nav_element"></span>
                         <span class="ham_bar nav_element"></span>
                         <span class="ham_bar nav_element"></span>
@@ -71,15 +71,17 @@
                     <ul id="main-menu" class="main_nav nav_element">
                         <li class="nav_item nav_item1 nav_element"><a class="nav_link nav_element" href="#">Book Now</a></li>
                         <li class="nav_item nav_item2 nav_element"><a class="nav_link nav_element" href="#">Gift Cards</a></li>
-                        <li id="nav_item3" class="nav_item nav_item3 nav_element">
-                            <button id="games_hover" class="games_hover games_link nav_element"  aria-label="games" aria-haspopup="true" aria-expanded="false">Games
-                                <svg class="svg_hover nav_element" width="15" height="10" viewBox="0 0 42 25">
-                                    <path d="M3 3L21 21L39 3" stroke-linecap="round"></path>
-                                </svg>
-                            </button>
-                            <ul class="dropdown nav_element">
-                                <li class="nav_item nav_element"><a  class="nav_link nav_element" href="#">Return of the Pharaohs</a></li>
-                                <li class="nav_item nav_element"><a  class="nav_link nav_element" href="clockwork.html">Clockwork Corridor</a></li>
+                        <li id="nav_item3" class="nav_item nav_item3 nav_element games_menu">
+                            <div class="games_button_fix nav_element games_menu">
+                                <button id="games_hover" class="games_hover games_link nav_element games_menu" aria-label="Open Games Submenu" aria-haspopup="true" aria-expanded="false" onclick="gamesToggleActive()">Games
+                                    <svg class="svg_hover nav_element games_menu" width="15" height="10" viewBox="0 0 42 25">
+                                        <path d="M3 3L21 21L39 3" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <ul class="dropdown nav_element games_menu">
+                                <li class="nav_item nav_element games_menu"><a  class="nav_link nav_element games_menu" href="#">Return of the Pharaohs</a></li>
+                                <li class="nav_item nav_element games_menu"><a  class="nav_link nav_element games_menu" href="clockwork.html">Clockwork Corridor</a></li>
                             </ul>
                         </li>
                         <li class="nav_item nav_item4 nav_element"><a class="nav_link nav_element" href="index.html#faq">FAQ</a></li>
@@ -109,7 +111,7 @@
                         <p>Forgotten for all time.</p>
                         <button aria-label="Read Less" onclick="toggleOverviewOff()">Read Less</button>
                     </div>
-                    <button class="less" aria-label="Read More" onclick="toggleOverviewOn()">Read More</button>
+                    <button class="more_btn" aria-label="Read More" onclick="toggleOverviewOn()">Read More</button>
                 </section>
                 <section id="games_info">
                     <div>
@@ -189,7 +191,7 @@
             </div>
         </main>
         <footer>
-            <p class="note">&copy; <span itemprop="legalName">Paragon Escape Games LLC </span> 2024</p>
+            <p class="note">&copy; Paragon Escape Games LLC 2024</p>
             <button name="Disable Cookies" onclick="deactivateCookies()">Disable Cookies</button>
         </footer>
         <!-- JAVASCRIPT LINKS HERE -->

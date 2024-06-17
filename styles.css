@@ -149,7 +149,7 @@ a:hover {
 }
 
 h2, h3, h4 {
-    line-height: 1.75;
+    line-height: 2;
     letter-spacing: 0.125rem;
 }
 
@@ -399,7 +399,7 @@ svg {
                 height: 24px;
             }
 
-            .nav_link:hover, .nav_link:focus, .games_link:hover, .games_hover:focus, .nav_item3:focus-within button {
+            .nav_link:hover, .nav_link:focus-visible, .games_link:hover, .games_hover:focus-visible, .games_hover.active {
                 color: var(--orange);
             }
 
@@ -411,6 +411,10 @@ svg {
                 stroke-width: 7.5;
             }
 
+            .games_button_fix {
+                line-height: 2;
+            }
+
             .games_hover {
                 background-color: transparent;
                 border: none;
@@ -418,21 +422,28 @@ svg {
                 color: var(--white);
                 font-size: 2rem;
                 font-weight: 500;
-                line-height: 1;
                 padding: 0;
+                line-height: 1.25;
             }
 
             .svg_hover {
                 transition: transform 0.2s ease-in-out;
             }
 
-            .nav_item3:focus-within .svg_hover {
+            /* .nav_item3:focus-within .svg_hover {
+                transform: rotate(-180deg);
+            } */
+
+            .games_hover.active .svg_hover {
                 transform: rotate(-180deg);
             }
 
-            .games_hover:hover .svg_hover, .games_hover:focus .svg_hover, .nav_item3:focus-within .svg_hover {
+            /* .games_hover:hover .svg_hover, .games_hover:focus .svg_hover, .nav_item3:focus-within .svg_hover {
                 stroke: var(--orange);
-                
+            } */
+
+            .games_hover.active .svg_hover, .games_hover:hover .svg_hover, .games_hover:focus-visible .svg_hover {
+                stroke: var(--orange);
             }
 
             .dropdown .nav_item {
@@ -530,8 +541,12 @@ svg {
                     padding: 0 1rem;
                 }
 
-                .nav_item3:focus-within .dropdown {
+                /* .nav_item3:focus-within .dropdown {
                     max-height: 8.6rem;
+                } */
+
+                .nav_item3.active .dropdown {
+                    max-height: 86px;
                 }
 
                 .dropdown a {
@@ -551,11 +566,19 @@ svg {
                     margin-bottom: 0;
                 }
 
-                .nav_item3:focus-within .dropdown a {
+                /* .nav_item3:focus-within .dropdown a {
+                    visibility: visible;
+                } */
+
+                .nav_item3.active .dropdown a {
                     visibility: visible;
                 }
 
-                .nav_item3:focus-within .dropdown li {
+                /* .nav_item3:focus-within .dropdown li {
+                    width: fit-content;
+                } */
+
+                .nav_item3.active .dropdown li {
                     width: fit-content;
                 }
 
@@ -582,8 +605,18 @@ svg {
                     font-size: 1.1rem;
                 }
 
-                .nav_item3:focus-within .dropdown {
+                /* .nav_item3:focus-within .dropdown {
                     max-height: 7rem;
+                } */
+
+                .nav_item3.active .dropdown {
+                    max-height: 65px;
+                }
+            }
+
+            @media only screen and (min-width: 275px){
+                .nav_item3.active .dropdown {
+                    max-height: 76px;
                 }
             }
 
@@ -610,8 +643,12 @@ svg {
                     font-size: 0.85rem;
                 }
 
-                .nav_item3:focus-within .dropdown {
+                /* .nav_item3:focus-within .dropdown {
                     max-height: 6.2rem;
+                } */
+
+                .nav_item3.active .dropdown {
+                    max-height: 90px;
                 }
 
                 .ham_bar {
@@ -642,6 +679,10 @@ svg {
                 .games_hover {
                     font-size: 1rem;
                 }
+
+                .nav_item3.active .dropdown {
+                    max-height: 120px;
+                }
             }
 
             @media only screen and (min-width: 1200px) {
@@ -655,7 +696,7 @@ svg {
                     top: -20px;
                     max-height: fit-content;
                     background-color: transparent;
-                    margin: 22px 0;
+                    margin: 0.5rem 0;
                     text-wrap: nowrap;
                     box-shadow: none;
                     justify-content: space-between;
@@ -679,7 +720,7 @@ svg {
 
                 .nav_item3 button {
                     line-height: 1.25;
-                    margin-bottom: 0.12rem;
+                    margin-bottom: 0.6rem;
                 }
 
                 .nav_link {
@@ -707,7 +748,6 @@ svg {
                     background-color: var(--black);
                     margin: 15px 0 0 -25px;
                     transition: max-height 0.3s ease-in-out, box-shadow 0.3s ease-out;
-                    background-color: var(--black);
                     border-radius: 0.35rem;
                 }
 
@@ -726,14 +766,25 @@ svg {
                     line-height: 1;
                 }
 
-                .nav_item3:focus-within .dropdown, .nav_item3:hover .dropdown { 
+                /* .nav_item3:focus-within .dropdown, .nav_item3:hover .dropdown { 
+                    box-shadow: 0 1rem 0.8rem -0.5rem rgba(8, 8, 10, 0.75);
+                    max-height: 200px;
+                    padding-top: 15px;
+                    margin-top: 0px;
+                } */
+
+                .nav_item3.active .dropdown { 
                     box-shadow: 0 1rem 0.8rem -0.5rem rgba(8, 8, 10, 0.75);
                     max-height: 200px;
                     padding-top: 15px;
                     margin-top: 0px;
                 }
 
-                .nav_item3:focus-within .dropdown a, .nav_item3:hover .dropdown a {
+                /* .nav_item3:focus-within .dropdown a, .nav_item3:hover .dropdown a {
+                    visibility: visible;
+                } */
+
+                .nav_item3.active .dropdown a {
                     visibility: visible;
                 }
         }
@@ -741,7 +792,7 @@ svg {
         @media only screen and (min-width: 2200px) {
             .main_nav {
                 top: -12px;
-                margin-top: 29px;
+                margin-top: 0.3rem;
             }
 
             .dropdown {
@@ -789,7 +840,11 @@ svg {
                 font-size: 0.75rem;
             }
 
-            .nav_item3:focus-within .dropdown {
+            /* .nav_item3:focus-within .dropdown {
+                max-height: 6rem;
+            } */
+
+            .nav_item3.active .dropdown {
                 max-height: 6rem;
             }
 
@@ -833,13 +888,28 @@ footer button {
     opacity: 0.85;
 }
 
-footer button:hover, footer button:focus-visible {
-    color: var(--orange);
-    background-color: var(--white);
-    border-color: var(--white);
-    opacity: 1;
+@media (hover: none) {
+    footer button:active {
+        color: var(--orange);
+        background-color: var(--white);
+        border-color: var(--white);
+        opacity: 1;
+    }
+}
+
+@media (hover: hover) {
+    footer button:hover {
+        color: var(--orange);
+        background-color: var(--white);
+        border-color: var(--white);
+        opacity: 1;
+    }
 }
 
 footer button:focus-visible {
     outline: 3px solid var(--orange);
+    color: var(--orange);
+    background-color: var(--white);
+    border-color: var(--white);
+    opacity: 1;
 }

@@ -52,6 +52,8 @@ function deactivateVideos() {
 }
 
 
+
+
 // Hamburger/Navigation Universal Variables
 //
 const hamburger = document.querySelector(".hamburger");
@@ -82,6 +84,7 @@ function closeMenu() {
 navLink.forEach(n => n.addEventListener("click", closeMenu));
 navLink2.forEach(n => n.addEventListener("click", closeMenu));
 
+// Close the menu when something outside the menu is pressed
 window.addEventListener('click', function(e) {
   if (e.target.className.includes("nav_element") != true) {
     closeMenu();
@@ -120,11 +123,38 @@ function ariaLabelUpdater() {
   document.getElementById("menu-icon").setAttribute("aria-label", hamActionValue);
 }
 
-// Update the Aria-Expanded attribute for the Games button on focus to indicate a submenu
-gamesMenu.addEventListener("focusin", (event) => {
-  dropdownMenu.setAttribute("aria-expanded", "true");
-});
 
-gamesMenu.addEventListener("focusout", (event) => {
-  dropdownMenu.setAttribute("aria-expanded", "false"), 1;
+
+// // Update the Aria-Expanded attribute for the Games button on focus to indicate a submenu
+// gamesMenu.addEventListener("focusin", (event) => {
+//   dropdownMenu.setAttribute("aria-expanded", "true");
+// });
+
+// gamesMenu.addEventListener("focusout", (event) => {
+//   dropdownMenu.setAttribute("aria-expanded", "false"), 1;
+// });
+
+const gamesSubMenu = document.querySelector(".games_hover");
+
+
+function gamesToggleActive(){
+  gamesSubMenu.classList.toggle("active")
+  gamesMenu.classList.toggle("active")
+  if (gamesSubMenu.classList.contains("active")) {
+    gamesSubMenu.setAttribute("aria-expanded", "true")
+    gamesSubMenu.setAttribute("aria-label", "Close Games Submenu")
+  } else {
+    gamesSubMenu.setAttribute("aria-expanded", "false")
+    gamesSubMenu.setAttribute("aria-label", "Open Games Submenu")
+  }
+}
+
+// Close the menu when something outside the menu is pressed
+window.addEventListener('click', function(e) {
+  if (!e.target.className.includes("games_menu")) {
+    gamesSubMenu.classList.remove("active")
+    gamesMenu.classList.remove("active")
+    gamesSubMenu.setAttribute("aria-expanded", "false")
+    gamesSubMenu.setAttribute("aria-label", "Open Games Submenu")
+  }
 });

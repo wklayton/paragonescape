@@ -167,6 +167,10 @@
             margin: 2rem 0;
         }
 
+        .room-info p {
+            margin-bottom: 1rem;
+        }
+
         .basic-info p, .room-info > div > p {
             text-shadow: .2rem .2rem .15rem var(--deep-black);
         }
@@ -347,10 +351,6 @@
 
             .basic-info p {
                 font-size: 1rem;
-            }
-
-            .room-info p {
-                margin-bottom: 1rem;
             }
 
             #pharaohs .room-info > div > p {
@@ -667,7 +667,7 @@
         }
 
         #contact address {
-            margin-top: 3rem;
+            margin-top: 2.3rem;
         }
 
         #contact a {

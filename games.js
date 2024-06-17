@@ -1,7 +1,7 @@
 
 
 const moreElement = document.querySelector(".more");
-const lessElement = document.querySelector(".less")
+const lessElement = document.querySelector(".more_btn")
 
 function toggleOverviewOn() {
     moreElement.classList.add("active");
