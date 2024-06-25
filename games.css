@@ -8,11 +8,11 @@
     }
 
     .pharaohs_welcome {
-        background: url(https://www.paragonescape.com/media/pharaohs-foreground-simple.webp) right center no-repeat, url(https://www.paragonescape.com/media/pharaohs-background.webp) center repeat-x;
+        background: url(assets/pharaohs-foreground-simple.webp) right center no-repeat, url(assets/pharaohs-background.webp) center repeat-x;
     }
 
     .clockwork_welcome {
-        background: url(https://www.paragonescape.com/media/clockwork-background.webp) center no-repeat;
+        background: url(assets/clockwork-background.webp) center no-repeat;
     }
 
     .games_welcome h2 {

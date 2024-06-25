@@ -20,9 +20,15 @@
         <!-- OTHER SOURCES -->
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="main.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:400&display=swap" rel="stylesheet" type="text/css">
+        </noscript>
+
+        <link rel="preload" href="https://use.typekit.net/cea2lqn.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link href="https://use.typekit.net/cea2lqn.css" rel="stylesheet" type="text/css">
+        </noscript>
     </head>
     <body itemscope itemtype="https://schema.org/EntertainmentBusiness">
         <header>
@@ -64,8 +70,31 @@
                 </div>
             </nav>
             <div class="welcome">
-                <img src="assets/paragon_main.png" alt="Paragon Escape Games Logo" width="865" height="627">
+                <img src="assets/paragon_main.webp" alt="Paragon Escape Games Logo" width="865" height="627">
                 <a class="welcome_book" href="#">Book Now</a>
+                <style>
+                    .welcome {
+                        width: 100%;
+                        height: 100vh;
+                        min-height: 300px;
+                        background: url(assets/welcome-background-pharaohs.webp) right no-repeat;
+                        background-size: cover;
+                        box-shadow: 0 -0.375rem 0.7rem rgba(5, 5, 6, 0.95) inset;
+                        overflow: hidden;
+                    }
+
+                    .welcome img {
+                        display: block;
+                        width: 80%;
+                        height: auto;
+                        max-height: 50vh;
+                        object-fit: contain;
+                        margin: 0 auto;
+                        padding-top: max(15vh, 85px);
+                        -webkit-filter: drop-shadow(0rem 0rem 0.3rem rgba(2, 2, 6, 0.8));
+                        filter: drop-shadow(0rem 0rem 0.3rem rgba(2, 2, 6, 0.8));
+                    }
+                </style>
                 <!-- Insert Arrow Icon -->
             </div>
         </header>
@@ -95,11 +124,11 @@
                 <div class="awards">
                     <p>Check out the awards won by our games!</p>
                     <div class="award_pics">
-                        <img src="https://paragonescape.com/media/terpeca-finalist-badge.webp" alt="Top Escape Rooms Project 2022 Finalist Award" width="1" height="1">
-                        <img src="https://paragonescape.com/media/terpeca-finalist-badge.webp" alt="Top Escape Rooms Project 2023 Finalist Award" width="1" height="1">
-                        <img src="https://paragonescape.com/media/morty-badge.webp" alt="Morty Top Escape Room 2022 Award" width="1" height="1">
-                        <img src="https://paragonescape.com/media/golden-lock-award.webp" alt="Golden Lock Award 2022" width="1" height="1">
-                        <img src="https://paragonescape.com/media/bullseye-badge.webp" alt="Bullseye Award 2022" width="1" height="1">
+                        <img src="assets/2022TERPECABadgeFinalist.webp" alt="Top Escape Rooms Project 2022 Finalist Award" width="800" height="800">
+                        <img src="assets/2023TERPECABadgeFinalist.webp" alt="Top Escape Rooms Project 2023 Finalist Award" width="800" height="800">
+                        <img src="assets/morty-badge.webp" alt="Morty Top Escape Room 2022 Award" width="300" height="245">
+                        <img src="assets/golden-lock-award.webp" alt="Golden Lock Award 2022" width="130" height="324">
+                        <img src="assets/bullseye-badge.webp" alt="Bullseye Award 2022" width="468" height="464">
                     </div>
                 </div>
                 <!-- RETURN OF THE PHARAOHS -->
