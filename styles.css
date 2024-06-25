@@ -242,11 +242,11 @@ svg {
                 margin: 0 auto;
             }
 
-            .paragon_logo svg {
+            /* .paragon_logo svg {
                 width: auto;
                 height: 45px;
                 margin-top: 4px;
-            }
+            } */
 
             .paragon_logo img {
                 width: auto;
@@ -264,11 +264,11 @@ svg {
                 height: 60px;
             }
 
-            .paragon_logo svg {
+            /* .paragon_logo svg {
                 width: auto;
                 height: 45px;
                 margin-top: 4px;
-            }
+            } */
 
             .paragon_logo img {
                 width: auto;
@@ -302,10 +302,10 @@ svg {
                 padding: 8px 0;
             }
 
-            .paragon_logo svg {
+            /* .paragon_logo svg {
                 width: auto;
                 height: 66px;
-            }
+            } */
 
             .paragon_logo img {
                 width: auto;
@@ -348,11 +348,11 @@ svg {
                 height: 125px;
             }
 
-            .paragon_logo svg {
+            /* .paragon_logo svg {
                 width: auto;
                 height: 110px;
                 margin-top: 8px;
-            }
+            } */
 
             .paragon_logo img {
                 width: auto;
@@ -407,6 +407,7 @@ svg {
                 width: 1.5rem;
                 height: auto;
                 margin-bottom: 1px;
+                fill: none;
                 stroke: var(--white);
                 stroke-width: 7.5;
             }
