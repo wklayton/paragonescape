@@ -77,6 +77,7 @@ function mobileMenu() {
 function closeMenu() {
   hamburger.classList.remove("active");
   mainNav.classList.remove("active");
+  gamesMenu.classList.remove("active");
   ariaExpUpdater();
 }
 
