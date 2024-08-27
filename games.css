@@ -2,7 +2,7 @@
 #games_info>div,.gallery_thumbs{grid-template-columns:auto auto auto}
 #game_pics h3,#games_info,#story_overview,.games_welcome h2,form{text-align:center}
 .games_welcome{height:8rem;width:100%;padding:6rem 0 4rem;margin:40px 0 2rem}
-.pharaohs_welcome{background:url(assets/pharaohs-bgr.webp) center no-repeat;background-size: cover;}
+.pharaohs_welcome{background:url(assets/pharaohs-background.webp) center no-repeat;background-size: cover;}
 .clockwork_welcome{background:url(assets/clockwork-background.webp) center no-repeat;background-size: cover;}
 #story_overview button,.games_book{cursor:pointer;color:var(--black);background-color:var(--orange)}
 .games_welcome h2{font-size:1.8rem}
