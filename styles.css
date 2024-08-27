@@ -1,4 +1,4 @@
-*{-webkit-tap-highlight-color: transparent;}
+*{-webkit-tap-highlight-color: transparent}
 h1 .paragon,h2{text-transform:uppercase}
 .hamburger,.main_nav,nav{position:fixed}
 .dropdown,.main_nav{max-height:0;overflow:hidden}
@@ -17,6 +17,7 @@ blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
 :root{--orange:rgb(255, 119, 0);--white:rgb(242,242,242);--lt-gray:rgb(202, 202, 202);--dk-gray:rgb(26, 25, 29);--black:rgb(12, 12, 14);--deep-black:rgb(9, 9, 10);--fonts:'roboto',sans-serif;font-size:7px;font-display:swap;}
 :focus-visible{outline:3px solid var(--white)}
+a,button{border-radius:0.15rem}
 @media only screen and (min-width:275px){
     :root{font-size:12px}}
 @media only screen and (min-width:425px){
