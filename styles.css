@@ -15,7 +15,7 @@ ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
-:root{--orange:rgb(255, 119, 0);--white:rgb(242,242,242);--lt-gray:rgb(202, 202, 202);--dk-gray:rgb(26, 25, 29);--black:rgb(12, 12, 14);--deep-black:rgb(9, 9, 10);--fonts:'roboto',sans-serif;font-size:7px;font-display:swap;}
+:root{--orange:rgb(235, 124, 40);--white:rgb(242,236,230);--lt-gray:rgb(202, 202, 202);--dk-gray:rgb(26, 25, 29);--black:rgb(12, 12, 14);--deep-black:rgb(9, 9, 10);--fonts:'roboto',sans-serif;font-size:7px;font-display:swap;}
 :focus-visible{outline:3px solid var(--white)}
 a,button{border-radius:0.15rem}
 @media only screen and (min-width:275px){
@@ -144,13 +144,14 @@ h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:4
     .dropdown a{font-size:.75rem}
     .nav_item3.active .dropdown{max-height:6rem}
     .nav_item3 .dropdown{width:100%;position:fixed;overflow:hidden;left:calc(-50% + 50%);background-color:var(--black);box-shadow:0 .5rem .7rem rgba(5,5,6,.95)}.dropdown .nav_item:last-child{padding-bottom:10px}}
-footer{padding:2% 0 3%; bottom: 0;}
-footer .note{margin:0 auto 1rem}
-.socials a{width: fit-content; margin: 0 auto; cursor:pointer;}
+.socials {display: grid; grid-template-columns: auto auto auto auto; margin: 1rem auto; width: 80%;}
+.socials a{display:inline; margin: 0 auto; cursor:pointer;}
 .socials a:focus-visible{outline:none;}
-.socials a:focus-visible svg{fill:var(--white);}
-footer a svg{fill:var(--orange);width:80%;height:auto;}
-footer a:hover svg{fill:var(--white);cursor:pointer}
+.socials a:focus-visible img{filter:grayscale(100%) brightness(1.75)}
+.socials a img{width:60%;height:auto; min-width: 35px; max-width: 90px; margin: 0 auto;}
+.socials a:hover img{filter:grayscale(100%) brightness(1.75);}
+footer{padding:2% 0 3%; bottom: 0;}
+footer .note{margin:1rem auto}
 footer button{font:inherit;padding:.3rem .5rem;border:2px solid var(--white);border-radius:.25rem;font-weight:500;letter-spacing:.1rem;font-size:.65rem;opacity:.85;display:block;margin:1rem auto 0}
 footer button:hover{color:var(--white);border-color:var(--white);opacity:1;cursor:pointer}
 footer button:active{color:var(--orange);background-color:var(--white);border-color:var(--white);opacity:1}
