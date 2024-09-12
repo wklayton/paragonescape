@@ -26,15 +26,11 @@ section{margin-top:3.5rem}
 .games_quicklinks a:hover img{opacity: 1}
 .games_quicklinks span{position: absolute;display: flex; text-align: center;top: 0; left: 0; width: 100%; height: 100%;justify-content: center; flex-direction: column; align-items: center;}
 .games_quicklinks img{display: block; width: 100%; height: auto; margin: 0 auto;border-radius: 1rem;filter: brightness(1.55) contrast(1.1);}
-@media screen and (min-width:1200px) {
-    .games_quicklinks{grid-template-columns: auto auto; gap: 1rem;}
-    .games_quicklinks a{font-size: 1.75rem}
-}
 #awards{width:80%;margin:0 auto;text-align: center;}
 .award_pics img{width:auto;max-width:100%;height:auto;max-height:60%;margin:auto}
 #games form,#games h3,.basic-info div{width:fit-content}
 .award_pics{display:grid;grid-template-columns:15% 15% 15% 15% 15%;justify-content:space-between;margin:0 auto}
-#faq .question,.basic-info,.room-menu{grid-template-columns:auto auto}
+#faq .question,.basic-info{grid-template-columns:auto auto}
 .room-info p{margin-bottom:1rem}
 .basic-info p,.room-info>div>p{text-shadow:.2rem .2rem .15rem var(--deep-black);font-size:1.2rem}
 #games h3{color:var(--white);margin:0 auto;text-transform:uppercase;font-size:1.6rem;font-weight:700;letter-spacing:.1rem;text-shadow:.2rem .2rem .35rem rgba(2,2,6,.95)}
@@ -52,12 +48,19 @@ section{margin-top:3.5rem}
 #games .video__iframe.yt_hidden,#games .video__notice.notice_hidden{max-height:0;visibility:hidden;padding:0;margin:0}
 .room-menu{margin:2rem auto .5rem;display:grid;justify-content:space-around}
 .faq_section,.why{margin-left:auto;margin-right:auto}
-.room-menu a{font-weight:700;padding:.75rem 1.8rem;font-size:0.9rem;border:3px solid var(--orange);border-radius:.15rem}
-.learn{text-shadow:.1rem .1rem .25rem var(--deep-black)}
+.room-menu a{font-weight:700;padding:1rem 2.2rem;font-size:1.6rem;border:3px solid var(--orange);border-radius:.15rem}
+.learn{text-shadow:.1rem .1rem .25rem var(--deep-black);margin-bottom: 2rem;}
 .learn:focus-visible,.learn:hover{color:var(--orange);background-color:var(--white);border-color:var(--white);text-shadow:none}
 .learn:focus-visible{outline-color:var(--orange)}
 .book{color:var(--black);background-color:var(--orange)}
 .book:focus-visible,.book:hover{color:var(--orange);background-color:var(--white);border-color:var(--white)}
+@media screen and (min-width:1200px) {
+    .games_quicklinks{grid-template-columns: auto auto; gap: 1rem;}
+    .games_quicklinks a{font-size: 1.75rem}
+    .room-menu{grid-template-columns:auto auto}
+    .room-menu a{font-size: 1.3rem;}
+    .book{margin-bottom: 2rem;}
+}
 #contact a,#faq a,.faq_box .question{color:var(--white)}
 #faq hgroup,.faq_box{border-bottom:2px solid var(--lt-gray)}
 .book:focus-visible{outline-color:var(--orange)}
