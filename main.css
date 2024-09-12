@@ -9,15 +9,17 @@
 .welcome_book:focus-visible{outline-color:var(--orange)}
 @media screen and (min-width:375px){
     .welcome_book{margin:1rem auto;padding:1rem 2.5rem;font-size:1.6rem}}
-@media only screen and (max-height:775px) and (max-width:1199.5px) and (orientation:landscape){.welcome_book {font-size: 0.8rem; padding: .6rem 1.2rem; margin-top: 0;}}
-#about,#contact,#games h2,#awards>h3,main{text-align:center}
+@media only screen and (max-height:775px) and (max-width:1199.5px) and (orientation:landscape){
+    .welcome_book {font-size: 1.2rem; padding: .8rem 1.5rem; margin-top: 0;}}
+#about,#contact,#games h2,#awards h2,main{text-align:center}
 main>section{margin:3.5rem auto}
-section{margin-top:3.5rem}
+section section{margin-top: 2rem;}
+#about{background-color: var(--black);box-shadow:0 -.45rem .7rem rgba(5,5,6,.85);padding: 2.5rem 0;}
 #contact address,#info{margin-top:2.3rem}
 #info>.note{font-weight:700;font-size:1.3rem;letter-spacing:.075rem}
 .info{margin-top:-1rem}.info h3{margin-bottom:.5rem}
 .info .note{color:var(--lt-gray);font-size:1rem;width:75%;margin:.75rem auto 0}
-#games{background-color:var(--black);box-shadow:0 -.45rem .7rem rgba(5,5,6,.85);padding-top:1rem}
+#games{background-color:var(--black);box-shadow:0 -.45rem .7rem rgba(5,5,6,.85);padding-top:2.5rem;margin-bottom: 0;}
 .games_quicklinks{display: grid; grid-template-columns: auto; text-align: center;width: 80%;margin: 0 auto 8rem;}
 .games_quicklinks > div{margin: 1rem auto;position: relative;}
 .games_quicklinks a{cursor: pointer;display: block;font-size: 1.8rem;font-weight: 700;color: var(--white);line-height: 1.3;text-shadow: .2rem .2rem .15rem var(--deep-black);;}
@@ -26,7 +28,7 @@ section{margin-top:3.5rem}
 .games_quicklinks a:hover img{opacity: 1}
 .games_quicklinks span{position: absolute;display: flex; text-align: center;top: 0; left: 0; width: 100%; height: 100%;justify-content: center; flex-direction: column; align-items: center;}
 .games_quicklinks img{display: block; width: 100%; height: auto; margin: 0 auto;border-radius: 1rem;filter: brightness(1.55) contrast(1.1);}
-#awards{width:80%;margin:0 auto;text-align: center;}
+#awards{width:80%;margin:-4.5rem auto 1rem;text-align: center;}
 .award_pics img{width:auto;max-width:100%;height:auto;max-height:60%;margin:auto}
 #games form,#games h3,.basic-info div{width:fit-content}
 .award_pics{display:grid;grid-template-columns:15% 15% 15% 15% 15%;justify-content:space-between;margin:0 auto}
@@ -34,7 +36,7 @@ section{margin-top:3.5rem}
 .room-info p{margin-bottom:1rem}
 .basic-info p,.room-info>div>p{text-shadow:.2rem .2rem .15rem var(--deep-black);font-size:1.2rem}
 #games h3{color:var(--white);margin:0 auto;text-transform:uppercase;font-size:1.6rem;font-weight:700;letter-spacing:.1rem;text-shadow:.2rem .2rem .35rem rgba(2,2,6,.95)}
-#awards h3{color:var(--white);margin:0 auto;text-transform:uppercase;font-size:1.6rem;font-weight:700;letter-spacing:.1rem;}
+#awards h2{color:var(--white);margin:0 auto;text-transform:uppercase;font-size:2rem;font-weight:700;letter-spacing:.1rem;}
 #clockwork img,#pharaohs img{-webkit-filter:drop-shadow(0.35rem 0.35rem .1rem rgba(2,2,6,0.65));filter:drop-shadow(.35rem .35rem .1rem rgba(2, 2, 6, .65))}
 .basic-info{display:inline-grid;gap:1rem}
 .basic-info img{display:inline-block;width:4.5rem;height:auto}
