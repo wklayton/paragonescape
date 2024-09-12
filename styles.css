@@ -20,14 +20,14 @@ table{border-collapse:collapse;border-spacing:0}
 a,button{border-radius:0.15rem}
 @media only screen and (min-width:275px){
     :root{font-size:12px}}
-@media only screen and (min-width:425px){
+@media only screen and (min-width:375px){
     :root{font-size:14px}}
 ::selection{background-color:var(--white);color:var(--black);text-shadow:none}
 a::selection,button::selection{color:var(--orange)}
 .dropdown .nav_link,img{color:var(--lt-gray)}
 a:hover,h2,p{color:var(--white)}
 .dropdown .nav_link:hover,a,button,h1 .paragon,h3{color:var(--orange)}
-p{font-size:1rem;font-weight:300;letter-spacing:1px}
+p{font-size:1.3rem;font-weight:300;letter-spacing:1px}
 .games_hover,.nav_link,h2{font-size:2rem}
 a,button{text-decoration:none;letter-spacing:1.2px;border:none}
 h2,h3,h4{letter-spacing:.125rem}
@@ -44,7 +44,7 @@ h1 .paragon{font-family:futura-pt,roboto,tahoma,sans-serif;font-style:normal;let
 .games_hover,.nav_link,footer button,h1 .escape{color:var(--white)}
 h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:400;font-style:normal;letter-spacing:6.1px;font-display:swap;}
 .paragon_logo img{width:auto;height:45px;margin-top:4px}
-@media screen and (min-width:425px){
+@media screen and (min-width:375){
     h1{line-height:.8;margin-top:8px}}
 .nav_item{margin:1rem auto 0}
 .nav_item6{margin-bottom:1.5rem}
