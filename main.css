@@ -52,7 +52,7 @@ section{margin-top:3.5rem}
 #games .video__iframe.yt_hidden,#games .video__notice.notice_hidden{max-height:0;visibility:hidden;padding:0;margin:0}
 .room-menu{margin:2rem auto .5rem;display:grid;justify-content:space-around}
 .faq_section,.why{margin-left:auto;margin-right:auto}
-.room-menu a{font-weight:500;padding:.75rem 1.8rem;font-size:1.15rem;border:3px solid var(--orange);border-radius:.15rem}
+.room-menu a{font-weight:700;padding:.75rem 1.8rem;font-size:0.9rem;border:3px solid var(--orange);border-radius:.15rem}
 .learn{text-shadow:.1rem .1rem .25rem var(--deep-black)}
 .learn:focus-visible,.learn:hover{color:var(--orange);background-color:var(--white);border-color:var(--white);text-shadow:none}
 .learn:focus-visible{outline-color:var(--orange)}
