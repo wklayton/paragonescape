@@ -1,5 +1,5 @@
 .award_pics img,.welcome img{object-fit:contain;object-fit:contain}
-#clockwork,#pharaohs{text-align:center;padding:2.6rem 10%;margin-top:-.2rem;height:auto}
+#clockwork,#pharaohs{text-align:center;padding:6rem 10% 6rem;height:fit-content; margin-top:-6rem; margin-bottom: 8rem;}
 .welcome{width:100%;height:100vh;min-height:300px;background:url(assets/welcome-background-pharaohs.webp) right/cover no-repeat;box-shadow:0 -.375rem .7rem rgba(5,5,6,.95) inset;overflow:hidden}
 .book,.learn,.welcome_book{box-shadow:0 0 .75rem .15rem rgba(2,2,6,.6)}
 .welcome img{display:block;width:80%;height:auto;max-height:60vh;margin:0 auto;padding-top:max(15vh,85px);-webkit-filter:drop-shadow(0rem 0rem 0.3rem rgba(2,2,6,0.8));filter:drop-shadow(0rem 0rem .3rem rgba(2, 2, 6, .8))}
@@ -9,7 +9,7 @@
 .welcome_book:focus-visible{outline-color:var(--orange)}
 @media screen and (min-width:425px){
     .welcome_book{margin:1rem auto;padding:.8rem 2rem;font-size:1.3rem}}
-#about,#contact,#games h2,.awards>p,main{text-align:center}
+#about,#contact,#games h2,#awards>h3,main{text-align:center}
 main>section{margin:3.5rem auto}
 section{margin-top:3.5rem}
 #contact address,#info{margin-top:2.3rem}
@@ -17,15 +17,28 @@ section{margin-top:3.5rem}
 .info{margin-top:-1rem}.info h3{margin-bottom:.5rem}
 .info .note{color:var(--lt-gray);font-size:.8rem;width:75%;margin:.75rem auto 0}
 #games{background-color:var(--black);box-shadow:0 -.45rem .7rem rgba(5,5,6,.85);padding-top:1rem}
-.awards{width:80%;margin:0 auto}
+.games_quicklinks{display: grid; grid-template-columns: auto; text-align: center;width: 80%;margin: 0 auto 8rem;}
+.games_quicklinks > div{margin: 1rem auto;position: relative;}
+.games_quicklinks a{cursor: pointer;display: block;font-size: 1.8rem;font-weight: 700;color: var(--white);line-height: 1.3;text-shadow: .2rem .2rem .15rem var(--deep-black);;}
+.games_quicklinks a img{opacity: 0.85;transition: opacity 0.2s ease-out;}
+.games_quicklinks a:active{color: var(--orange);}
+.games_quicklinks a:hover img{opacity: 1}
+.games_quicklinks span{position: absolute;display: flex; text-align: center;top: 0; left: 0; width: 100%; height: 100%;justify-content: center; flex-direction: column; align-items: center;}
+.games_quicklinks img{display: block; width: 100%; height: auto; margin: 0 auto;border-radius: 1rem;filter: brightness(1.55) contrast(1.1);}
+@media screen and (min-width:1200px) {
+    .games_quicklinks{grid-template-columns: auto auto; gap: 1rem;}
+    .games_quicklinks a{font-size: 1.75rem}
+}
+#awards{width:80%;margin:0 auto;text-align: center;}
 .award_pics img{width:auto;max-width:100%;height:auto;max-height:60%;margin:auto}
 #games form,#games h3,.basic-info div{width:fit-content}
 .award_pics{display:grid;grid-template-columns:15% 15% 15% 15% 15%;justify-content:space-between;margin:0 auto}
 #faq .question,.basic-info,.room-menu{grid-template-columns:auto auto}
-#games section{margin:2rem 0}
 .room-info p{margin-bottom:1rem}
 .basic-info p,.room-info>div>p{text-shadow:.2rem .2rem .15rem var(--deep-black);font-size:1.2rem}
-#games h3{color:var(--white);margin:0 auto;text-transform:uppercase;font-size:1.6rem;font-weight:700;letter-spacing:.1rem;text-shadow:.2rem .2rem .35rem rgba(2,2,6,.95)}#clockwork img,#pharaohs img{-webkit-filter:drop-shadow(0.35rem 0.35rem .1rem rgba(2,2,6,0.65));filter:drop-shadow(.35rem .35rem .1rem rgba(2, 2, 6, .65))}
+#games h3{color:var(--white);margin:0 auto;text-transform:uppercase;font-size:1.6rem;font-weight:700;letter-spacing:.1rem;text-shadow:.2rem .2rem .35rem rgba(2,2,6,.95)}
+#awards h3{color:var(--white);margin:0 auto;text-transform:uppercase;font-size:1.6rem;font-weight:700;letter-spacing:.1rem;}
+#clockwork img,#pharaohs img{-webkit-filter:drop-shadow(0.35rem 0.35rem .1rem rgba(2,2,6,0.65));filter:drop-shadow(.35rem .35rem .1rem rgba(2, 2, 6, .65))}
 .basic-info{display:inline-grid;gap:1rem}
 .basic-info img{display:inline-block;width:4.5rem;height:auto}
 .basic-info p{font-weight:400;margin-top:-.75rem}
@@ -110,7 +123,7 @@ section{margin-top:3.5rem}
     .faq_box .question{font-size:1.1rem}
     #faq .question{margin-left:0;text-align:left}
     .answer{text-align:left;font-size:.9rem}}
-#contact h2{width:fit-content;padding:0 2.3rem;border-bottom:2px solid var(--orange);margin:0 auto 2rem}
+#contact h2{width:fit-content;padding:0 2.3rem;border-bottom:2px solid var(--orange);margin:0 auto 2rem;padding-top:2.8rem;margin-top:-2.8rem}
 #contact address span::selection{color:var(--orange)}
 #contact a{width:fit-content;margin:2rem auto;font-size:1.1rem;font-weight:700}
 #contact a:focus-visible,#contact a:hover{color:var(--orange)}
