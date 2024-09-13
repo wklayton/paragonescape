@@ -10,12 +10,12 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 a,body,button{font-family:var(--fonts)}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 body{line-height:1}
-.games_button_fix,.nav_item,.nav_link,h2,h3,h4,p{line-height:2}
+.games_hover,.nav_item,.nav_link,h2,h3,h4,p{line-height:2}
 ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
-:root{--orange:rgb(235, 124, 40);--white:rgb(242,236,230);--lt-gray:rgb(202, 202, 202);--dk-gray:rgb(26, 25, 29);--black:rgb(12, 12, 14);--deep-black:rgb(9, 9, 10);--fonts:'roboto',sans-serif;font-size:7px;font-display:swap;}
+:root{--orange:rgb(235, 124, 40);--white:rgb(242,236,230);--lt-gray:rgb(202, 202, 202);--dk-gray:rgb(26, 25, 29);--black:rgb(12, 12, 14);--deep-black:rgb(9, 9, 10);--shadow:rgba(9,9,10,.8);--fonts:'roboto',sans-serif;font-size:7px;font-display:swap;}
 :focus-visible{outline:3px solid var(--white)}
 a,button{border-radius:0.15rem}
 @media only screen and (min-width:275px){
@@ -51,7 +51,7 @@ h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:4
 .height_adj{height:24px}
 .games_hover.active,.games_hover:focus-visible,.games_link:hover,.nav_link:focus-visible,.nav_link:hover{color:var(--orange)}
 .nav_item svg{width:1.5rem;height:auto;margin-bottom:1px;fill:none;stroke:var(--white);stroke-width:7.5}
-.games_hover{background-color:transparent;padding:0;line-height:1.25}
+.games_hover{background-color:transparent;padding:0}
 .main_nav,footer{text-align:center;background-color:var(--black)}
 .svg_hover{transition:transform .2s ease-in-out}
 .games_hover.active .svg_hover{transform:rotate(-180deg)}
@@ -66,7 +66,7 @@ h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:4
 .hamburger.active .ham_bar:nth-child(2){transform:rotate(25deg);opacity:0;scale:0.25}
 .hamburger.active .ham_bar:first-child{transform:translateY(7px) rotate(45deg)}
 .hamburger.active .ham_bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.dropdown{transition:max-height .3s ease-in-out;padding:0 1rem}
-.nav_item3.active .dropdown{max-height:86px}
+.nav_item3.active .dropdown{max-height:46px;}
 .dropdown a{font-size:1.4rem}
 .dropdown li{width:0}
 .dropdown .nav_item{margin:.5rem auto}
@@ -112,17 +112,17 @@ h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:4
     h1{line-height:.85}
     .main_nav,.main_nav>.nav_item{position:relative;visibility:visible}
     .dropdown,.main_nav,.nav_item3.active .dropdown a{visibility:visible}
-    .main_nav{display:block;overflow:visible;display:inline-flex;flex-direction:row;top:-20px;max-height:fit-content;background-color:transparent;margin:.5rem 0 .5rem auto;text-wrap:nowrap;box-shadow:none;justify-content:space-between;place-items:center}
+    .main_nav{display:block;overflow:visible;display:inline-flex;flex-direction:row;top:-20px;max-height:fit-content;background-color:transparent;margin:.8rem 0 .5rem auto;text-wrap:nowrap;box-shadow:none;justify-content:space-between;place-items:center}
     .main_nav>.nav_item{width:auto;text-align:right;margin-right:0;line-height:1}
     .main_nav .nav_item{margin-top:.4rem;margin-bottom:.4rem}
-    .nav_item3 button{line-height:1.25;margin-bottom:.6rem}
+    .nav_item3 button{line-height:1;margin-bottom:.21rem}
     .dropdown a,.games_hover,.nav_link{font-size:.75rem}
     .nav_item svg{width:.6rem}
     .hamburger{display:none}
     .dropdown{padding-left:0;padding-right:0;overflow:hidden;position:absolute;background-color:var(--black);margin:15px 0 0 -25px;transition:max-height .3s ease-in-out,box-shadow .3s ease-out;border-radius:.35rem}
     .dropdown li{width:auto}
     .dropdown .nav_item{padding:0 1rem .5rem;text-align:left;margin-left:0;line-height:1}
-    .nav_item3.active .dropdown{box-shadow:0 1rem .8rem -.5rem rgba(8,8,10,.75);max-height:200px;padding-top:15px;margin-top:0}}
+    .nav_item3.active .dropdown{box-shadow:0 1rem .8rem -.5rem rgba(9,9,10,.75);max-height:200px;padding-top:15px;margin-top:0}}
 @media only screen and (min-width:2200px){
     :root{font-size:38px}
     nav{height:125px}
@@ -130,7 +130,7 @@ h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:4
     h1{margin-top:8px}
     h1 .paragon{font-size:70px}
     h1 .escape{font-size:25px;letter-spacing:12.5px}
-    .main_nav{top:-12px;margin-top:.3rem}
+    .main_nav{top:-12px;margin-top:.7rem}
     .dropdown{margin-left:-37px}}
 @media only screen and (max-height:775px) and (max-width:1199.5px) and (orientation:landscape){
     .main_nav{flex-direction:row;justify-content:space-evenly;position:absolute;height:fit-content}
@@ -143,7 +143,7 @@ h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:4
     .dropdown .nav_item:first-child{margin-top:.5rem}
     .dropdown a{font-size:.75rem}
     .nav_item3.active .dropdown{max-height:6rem}
-    .nav_item3 .dropdown{width:100%;position:fixed;overflow:hidden;left:calc(-50% + 50%);background-color:var(--black);box-shadow:0 .5rem .7rem rgba(5,5,6,.95)}.dropdown .nav_item:last-child{padding-bottom:10px}}
+    .nav_item3 .dropdown{width:100%;position:fixed;overflow:hidden;left:calc(-50% + 50%);background-color:var(--black);box-shadow:0 .5rem .7rem rgba(9,9,10,.95)}.dropdown .nav_item:last-child{padding-bottom:10px}}
 .socials {display: grid; grid-template-columns: auto auto auto auto; margin: 1rem auto; width: 80%;}
 .socials a{display:inline; margin: 0 auto; cursor:pointer;}
 .socials a:focus-visible{outline:none;}
