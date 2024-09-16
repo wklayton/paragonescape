@@ -10,7 +10,7 @@
 .more p,.pics_gallery{margin:0 auto}
 .games_book:focus-visible,.games_book:hover{background-color:var(--white);color:var(--orange)}
 .games_book:focus-visible{outline-color:var(--orange)}
-#story_overview{width:75%;margin:0 auto}
+#story_overview{width:75%;margin:0 auto 2rem}
 #story_overview p{font-size:1.25rem}
 #story_overview button{padding:.5rem 1rem;font-size:.85rem;font-weight:700}
 #story_overview button:hover{background-color:var(--white);color:var(--orange)}

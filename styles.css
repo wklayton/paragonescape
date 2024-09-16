@@ -96,7 +96,7 @@ h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:4
     .games_hover svg{width:.85rem}
     .main_nav{top:80px}
     .hamburger{left:83%;top:28px;width:50px}
-    .dropdown a{font-size:.85rem}
+    .dropdown a{font-size:.9rem}
     .nav_item3.active .dropdown{max-height:90px}
     .ham_bar{margin-bottom:8px;border-width:2px}
     .hamburger.active .ham_bar:first-child{transform:translateY(12px) rotate(45deg)}
@@ -120,12 +120,13 @@ h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:4
     .main_nav .nav_item{margin-top:.4rem;margin-bottom:.4rem}
     .nav_item3 button{line-height:1;margin-bottom:.21rem}
     .dropdown a,.games_hover,.nav_link{font-size:.75rem}
-    .nav_item svg{width:.6rem}
+    .nav_item svg{width:.5rem;padding-bottom: 2px;}
     .hamburger{display:none}
     .dropdown{padding-left:0;padding-right:0;overflow:hidden;position:absolute;background-color:var(--black);margin:15px 0 0 -25px;transition:max-height .3s ease-in-out,box-shadow .3s ease-out;border-radius:.35rem}
     .dropdown li{width:auto}
     .dropdown .nav_item{padding:0 1rem .5rem;text-align:left;margin-left:0;line-height:1}
-    .nav_item3.active .dropdown{box-shadow:0 1rem .8rem -.5rem rgba(9,9,10,.75);max-height:200px;padding-top:15px;margin-top:0}}
+    .nav_item3.active .dropdown{box-shadow:0 1rem .8rem -.5rem rgba(9,9,10,.75);max-height:200px;padding-top:15px;margin-top:0}
+    .games_hover.active .svg_hover{transform:rotate(-180deg) translateY(2px)}}
 @media only screen and (min-width:2200px){
     :root{font-size:38px}
     nav{height:125px}
