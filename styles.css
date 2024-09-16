@@ -43,9 +43,9 @@ h1{padding-left:10px;white-space:normal;vertical-align:top;display:none;margin-t
 h1 .paragon{font-family:futura-pt,roboto,tahoma,sans-serif;font-style:normal;letter-spacing:.65px;height:fit-content;font-display:swap;}
 h1 .h1_p{letter-spacing: -.75px;}
 h1 .h1_a1{letter-spacing: 1px;}
-h1 .h1_r{letter-spacing: 2.5px;}
+h1 .h1_r{letter-spacing: 2px;}
 .games_hover,.nav_link,footer button,h1 .escape{color:var(--white)}
-h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:400;font-style:normal;letter-spacing:4.5px;font-display:swap;margin-left: 1.25px;}
+h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:400;font-style:normal;letter-spacing:4.45px;font-display:swap;margin-left: 1.25px;}
 .paragon_logo img{width:auto;height:45px;margin-top:4px}
 @media screen and (min-width:375){
     h1{line-height:.8;margin-top:8px}}
