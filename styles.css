@@ -82,7 +82,7 @@ h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:4
     h1 .escape{font-size:10.75px}
     .main_nav{top:64px}
     .games_hover,.nav_link{font-size:1.3rem}
-    .nav_item svg{width:1rem;margin-bottom:0}
+    .nav_item svg{width:.95rem;margin-bottom:1px}
     .dropdown a{font-size:1.1rem}
     .nav_item3.active .dropdown{max-height:76px}}
 @media only screen and (min-width:520px){
@@ -93,7 +93,7 @@ h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:4
     h1 .paragon{font-size:43px}
     h1 .escape{font-size:18.2px;letter-spacing: 6.15px;}
     .games_hover,.nav_link{font-size:1.1rem}
-    .games_hover svg{width:.85rem}
+    .games_hover svg{width:.75rem}
     .main_nav{top:80px}
     .hamburger{left:83%;top:28px;width:50px}
     .dropdown a{font-size:.9rem}
