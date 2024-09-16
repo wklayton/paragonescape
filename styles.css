@@ -160,4 +160,3 @@ footer button{font:inherit;padding:.3rem .5rem;border:2px solid var(--white);bor
 footer button:hover{color:var(--white);border-color:var(--white);opacity:1;cursor:pointer}
 footer button:active{color:var(--orange);background-color:var(--white);border-color:var(--white);opacity:1}
 footer button:focus-visible{outline:3px solid var(--orange);color:var(--orange);background-color:var(--white);border-color:var(--white);opacity:1}
-/* Test */
