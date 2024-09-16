@@ -70,7 +70,9 @@ section section{margin-top: 2rem;}
 .answer{font-size:1.1rem}
 #pharaohs{background:url(assets/pharaohs-foreground-simple.webp) right center/cover no-repeat,url(assets/pharaohs-background.webp) center/cover no-repeat}
 #clockwork{background:url(assets/clockwork-foreground-small.webp) left center/cover no-repeat,url(assets/clockwork-background.webp) center/cover no-repeat}
-.why{width:65%}
+.why{width:80%}
+.why h3{font-size: 2rem;}
+.why p{font-size: 1.2rem}
 #contact a,.answer,.faq_box{display:block}
 #faq h2{padding-top:4rem;margin-top:-4rem}
 #faq hgroup p{font-size:1.3rem;font-weight:700;margin-top:-.5rem}
@@ -123,8 +125,9 @@ section section{margin-top: 2rem;}
     #pharaohs .room-menu{justify-content:flex-start;gap:1rem}
     #clockwork .room-menu{justify-content:flex-end;gap:1rem}
     .why{display:grid;grid-template-columns:auto auto;justify-content:space-between;width:80%}
-    .why section{width:90%;margin-left:auto;margin-right:auto}
-    .why h3{font-size:1.55rem}
+    .why section{width:85%;margin-left:auto;margin-right:auto}
+    .why h3{font-size:1.4rem}
+    .why p{font-size: .9rem;}
     #faq hgroup{margin-left:10%}
     .faq_box .question{font-size:1.1rem}
     #faq .question{margin-left:0;text-align:left}
