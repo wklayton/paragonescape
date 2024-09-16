@@ -44,7 +44,6 @@ h1 .paragon{font-family:futura-pt,roboto,tahoma,sans-serif;font-style:normal;let
 h1 .h1_p{letter-spacing: -.75px;}
 h1 .h1_a1{letter-spacing: 1px;}
 h1 .h1_r{letter-spacing: 2.5px;}
-h1 .h1_a2{letter-spacing: -.5px;}
 .games_hover,.nav_link,footer button,h1 .escape{color:var(--white)}
 h1 .escape{line-height:1;font-family:courier-std,courier,monospace;font-weight:400;font-style:normal;letter-spacing:4.35px;font-display:swap;margin-left: 1.25px;}
 .paragon_logo img{width:auto;height:45px;margin-top:4px}
