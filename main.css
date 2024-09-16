@@ -78,7 +78,7 @@ section section{margin-top: 2rem;}
 #faq hgroup p{font-size:1.3rem;font-weight:700;margin-top:-.5rem}
 #faq hgroup{padding-bottom:1.5rem;width:80%;margin:0 auto}
 .faq_box button{width:100%;cursor:pointer}
-#faq a{text-decoration:none;font-weight:500}
+#faq a{text-decoration:none;font-weight:700}
 .faq_box{padding:1rem 0;line-height:1.75;cursor:pointer}
 .faq_box .question{font-weight:500;font-size:1.3rem}
 .faq_section{width:80%}
