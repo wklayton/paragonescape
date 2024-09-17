@@ -25,7 +25,7 @@ section section{margin-top: 2rem;}
 .games_quicklinks > div{margin: 1rem auto;position: relative; width: 100%;}
 .games_quicklinks a{cursor: pointer;display: block;font-size: 1.8rem;font-weight: 700;color: var(--white);line-height: 1.3;text-shadow: .2rem .2rem .15rem var(--deep-black);transition:color 0.2s ease-in-out;}
 .games_quicklinks a img{opacity: 0.75;transition:opacity 0.2s ease-in-out}
-.games_quicklinks a:hover, a:hover img{color: var(--orange); opacity: 1}
+.games_quicklinks a:hover, .games_quicklinks a:hover img, .games_quicklinks a:focus-visible, .games_quicklinks a:focus-visible img{color: var(--orange); opacity: 1}
 .games_quicklinks span:first-of-type{position: absolute;display: flex; text-align: center;top: 0; left: 0; width: 100%; height: 100%;justify-content: center; flex-direction: column; align-items: center;}
 .games_quicklinks span:nth-of-type(2n){position: absolute;display: flex; text-align: center;top: 75%; left: 0; width: 100%;justify-content: center; flex-direction: column; align-items: center;font-size: 1rem;}
 .games_quicklinks img{display: block; width: 100%; height: auto; margin: 0 auto;border-radius: 1rem;box-shadow: 0 0 0.5em var(--shadow);}
