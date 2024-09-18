@@ -1,0 +1,6 @@
+.nf_main{height: 100vh;text-align: center;}
+#nf_section{width: 80%;margin: 0 auto}
+#nf_section h2{padding-top: 4rem; font-size: 5rem}
+#nf_section a{font-weight: 700}
+#nf_section .nf_a_button{display:block; width: 50%; color: var(--black);background-color: var(--orange); font-size:1.4rem;padding: 1.3rem 0;margin: 2rem auto;}
+#nf_section .nf_a_button:hover{color: var(--orange);background-color: var(--white);}
