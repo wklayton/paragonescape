@@ -1,7 +1,6 @@
-.nf_main{text-align: center;height: 100vh;}
-#nf_section{width: 80%;margin: 0 auto}
-#nf_section h2{padding-top:max(10vh,85px); font-size: 5rem}
+.nf_main{display: grid; grid-template-columns: auto;height: 100vh;margin: 0 auto;width: 80%;}
+#nf_section{display: flex; text-align: center;top: -10%; left: 0; width: 100%; height: 100%;justify-content: center; flex-direction: column; align-items: center;position: relative;}
+#nf_section h2{font-size: 6rem;padding-top:max(1px,70px);}
 #nf_section a{font-weight: 700}
-#nf_section p{font-size: 1.1rem;}
-#nf_section .nf_a_button{display:block;color: var(--black);background-color: var(--orange); font-size:1.3rem;padding: 1rem 0;margin: 2rem auto;}
+#nf_section .nf_a_button{display:block;color: var(--black);background-color: var(--orange); font-size:1.3rem;padding: 1rem 1.2rem;margin: 2rem auto 0;}
 #nf_section .nf_a_button:hover{color: var(--orange);background-color: var(--white);}
