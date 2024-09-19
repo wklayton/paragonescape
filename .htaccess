@@ -1,12 +1,13 @@
+ErrorDocument 404 /404.html
+
 RewriteEngine on
+
+RewriteRule ^home$ index.html [L]
+RewriteRule ^pharaohs$ pharaohs.html [L]
+RewriteRule ^clockwork$ clockwork.html [L]
+
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html
-
-ErrorDocument 404 / 404.html
